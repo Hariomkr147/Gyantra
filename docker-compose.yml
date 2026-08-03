@@ -1,0 +1,59 @@
+# Gyantra — local deployment
+#
+# Changes from the original baseline:
+#  - frontend is now the React app on port 5173 (was Streamlit on 8501)
+#  - frontend proxies /api to the backend, so the browser needs no CORS setup
+#  - both services have healthchecks and the frontend waits for a healthy backend
+#  - bind-mounts for uploads/exports so generated PDFs are inspectable on the host
+#  - the `version` key is dropped (obsolete in Compose v2)
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      # Container paths — these override anything in .env.
+      DATABASE_URL: sqlite+aiosqlite:///./data/gyantra.db
+      UPLOAD_DIR: /app/uploads
+      EXPORT_DIR: /app/exports
+      CACHE_DIR: /app/data/cache
+      PYTHONUNBUFFERED: "1"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/uploads:/app/uploads
+      - ./data/exports:/app/exports
+      - backend_db:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Empty means "same origin" — nginx proxies /api to the backend service.
+        VITE_API_URL: ""
+    ports:
+      - "5173:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  backend_db:

@@ -1,0 +1,1319 @@
+{
+  "metadata": {
+    "job_id": "sample-force_and_laws_of_motion",
+    "created_at": "2026-08-02T12:04:40.271494+00:00",
+    "pipeline_version": "1.0.0",
+    "source_file": "force_and_laws_of_motion.md",
+    "processing_time_seconds": 0.05,
+    "model_calls": 15,
+    "total_tokens_used": 13301,
+    "models_used": [
+      "demo/stub"
+    ],
+    "demo_mode": true
+  },
+  "document_intelligence": {
+    "metadata": {
+      "line_count": 87,
+      "block_count": 25,
+      "routing": {
+        "reason": "plain text file"
+      },
+      "route_chosen": "lightweight_text"
+    },
+    "blocks": [
+      {
+        "id": "7192e9804713",
+        "block_type": "heading",
+        "content": "Chapter 8: Force and Laws of Motion",
+        "level": 1,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "16efa0f9d642",
+        "block_type": "heading",
+        "content": "8.1 Balanced and Unbalanced Forces",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "abd7e3494399",
+        "block_type": "paragraph",
+        "content": "A force can be a push or a pull. When several forces act on a body at the same time, their effects can cancel one another. Such forces are called balanced forces. If the net force on an object is not zero, the forces are unbalanced and the object accelerates in the direction of the net force.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "f3de7990d160",
+        "block_type": "paragraph",
+        "content": "Consider a wooden block resting on a table. The weight of the block acts downwards and the table pushes upwards with an equal force. These two forces are balanced, so the block stays at rest. Now imagine pushing the block sideways. If the applied force is greater than the force of friction, the block begins to move. The forces are now unbalanced.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "157ecb8ebf90",
+        "block_type": "paragraph",
+        "content": "An unbalanced force is needed to change the state of motion of an object. It can change the speed of the object, the direction of its motion, or both.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "574a058f0cc4",
+        "block_type": "heading",
+        "content": "8.2 First Law of Motion",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "24a45106cc39",
+        "block_type": "paragraph",
+        "content": "An object remains in a state of rest or of uniform motion in a straight line unless acted upon by an unbalanced external force. This is Newton's first law of motion, also called the law of inertia.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "ddfdaa40e9f6",
+        "block_type": "paragraph",
+        "content": "Inertia is the natural tendency of an object to resist a change in its state of motion. The mass of an object is a measure of its inertia. A heavier object has greater inertia than a lighter one, so a larger force is needed to change its state of motion.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "1266ca5ff13d",
+        "block_type": "paragraph",
+        "content": "Everyday observations illustrate this law. When a moving bus brakes suddenly, passengers lean forward because their bodies continue to move even though the bus has slowed. When the bus starts suddenly, passengers fall backwards, because their bodies were at rest and tend to remain at rest.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "914a94568f17",
+        "block_type": "heading",
+        "content": "8.3 Second Law of Motion",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "17a86950914a",
+        "block_type": "paragraph",
+        "content": "The rate of change of momentum of an object is proportional to the applied unbalanced force in the direction of the force.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "957f5d01f6bf",
+        "block_type": "paragraph",
+        "content": "Momentum is the product of the mass and the velocity of an object.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "f0a8c3336e70",
+        "block_type": "paragraph",
+        "content": "p = m * v",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "315d6d7a0260",
+        "block_type": "paragraph",
+        "content": "The second law can be written in the familiar form:",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "b33eb675aba2",
+        "block_type": "paragraph",
+        "content": "F = m * a",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "909546132dc5",
+        "block_type": "paragraph",
+        "content": "where F is the force applied, m is the mass of the object, and a is the acceleration produced. The SI unit of force is the newton (N). One newton is the force that produces an acceleration of 1 metre per second squared in an object of mass 1 kilogram.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "9679b8bb0a69",
+        "block_type": "paragraph",
+        "content": "Example 8.1: A force of 5 N acts on a mass of 2 kg. The acceleration produced is a = F/m = 5/2 = 2.5 metre per second squared.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "d54bc392beaf",
+        "block_type": "paragraph",
+        "content": "Example 8.2: A cricket player pulls his hands backwards while catching a fast ball. By doing so he increases the time taken to reduce the momentum of the ball to zero. Since the rate of change of momentum is reduced, the force exerted on his hands is smaller and injury is avoided.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "6bb4663a9f7a",
+        "block_type": "heading",
+        "content": "8.4 Third Law of Motion",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "764a0117ee78",
+        "block_type": "paragraph",
+        "content": "To every action there is an equal and opposite reaction. These forces always act on two different bodies, never on the same body.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "e9a93d2b9e7d",
+        "block_type": "paragraph",
+        "content": "When a bullet is fired from a gun, the gun exerts a forward force on the bullet and the bullet exerts an equal backward force on the gun. This is why the gun recoils. Because the mass of the gun is much larger than that of the bullet, the acceleration of the gun is much smaller.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "4804b448d14c",
+        "block_type": "paragraph",
+        "content": "A person walking pushes backwards on the ground, and the ground pushes the person forward with an equal force. Without this reaction force, walking would not be possible.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "621b98922e16",
+        "block_type": "heading",
+        "content": "8.5 Conservation of Momentum",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "dc95ddbd3b87",
+        "block_type": "paragraph",
+        "content": "When two objects collide, the total momentum of the two objects before the collision is equal to the total momentum after the collision, provided no external unbalanced force acts on them. This is the law of conservation of momentum.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "a67a28f3f8d6",
+        "block_type": "table",
+        "content": "| Law | Statement | Key idea |\n| --- | --- | --- |\n| First | An object keeps its state of rest or uniform motion unless an unbalanced force acts | Inertia |\n| Second | Rate of change of momentum is proportional to the applied force | F equals m times a |\n| Third | Action and reaction are equal and opposite | Forces act on two bodies |",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      }
+    ],
+    "plain_text": "# Chapter 8: Force and Laws of Motion\n\n## 8.1 Balanced and Unbalanced Forces\n\nA force can be a push or a pull. When several forces act on a body at the same\ntime, their effects can cancel one another. Such forces are called balanced\nforces. If the net force on an object is not zero, the forces are unbalanced and\nthe object accelerates in the direction of the net force.\n\nConsider a wooden block resting on a table. The weight of the block acts\ndownwards and the table pushes upwards with an equal force. These two forces are\nbalanced, so the block stays at rest. Now imagine pushing the block sideways. If\nthe applied force is greater than the force of friction, the block begins to\nmove. The forces are now unbalanced.\n\nAn unbalanced force is needed to change the state of motion of an object. It can\nchange the speed of the object, the direction of its motion, or both.\n\n## 8.2 First Law of Motion\n\nAn object remains in a state of rest or of uniform motion in a straight line\nunless acted upon by an unbalanced external force. This is Newton's first law of\nmotion, also called the law of inertia.\n\nInertia is the natural tendency of an object to resist a change in its state of\nmotion. The mass of an object is a measure of its inertia. A heavier object has\ngreater inertia than a lighter one, so a larger force is needed to change its\nstate of motion.\n\nEveryday observations illustrate this law. When a moving bus brakes suddenly,\npassengers lean forward because their bodies continue to move even though the bus\nhas slowed. When the bus starts suddenly, passengers fall backwards, because\ntheir bodies were at rest and tend to remain at rest.\n\n## 8.3 Second Law of Motion\n\nThe rate of change of momentum of an object is proportional to the applied\nunbalanced force in the direction of the force.\n\nMomentum is the product of the mass and the velocity of an object.\n\np = m * v\n\nThe second law can be written in the familiar form:\n\nF = m * a\n\nwhere F is the force applied, m is the mass of the object, and a is the\nacceleration produced. The SI unit of force is the newton (N). One newton is the\nforce that produces an acceleration of 1 metre per second squared in an object of\nmass 1 kilogram.\n\nExample 8.1: A force of 5 N acts on a mass of 2 kg. The acceleration produced is\na = F/m = 5/2 = 2.5 metre per second squared.\n\nExample 8.2: A cricket player pulls his hands backwards while catching a fast\nball. By doing so he increases the time taken to reduce the momentum of the ball\nto zero. Since the rate of change of momentum is reduced, the force exerted on\nhis hands is smaller and injury is avoided.\n\n## 8.4 Third Law of Motion\n\nTo every action there is an equal and opposite reaction. These forces always act\non two different bodies, never on the same body.\n\nWhen a bullet is fired from a gun, the gun exerts a forward force on the bullet\nand the bullet exerts an equal backward force on the gun. This is why the gun\nrecoils. Because the mass of the gun is much larger than that of the bullet, the\nacceleration of the gun is much smaller.\n\nA person walking pushes backwards on the ground, and the ground pushes the person\nforward with an equal force. Without this reaction force, walking would not be\npossible.\n\n## 8.5 Conservation of Momentum\n\nWhen two objects collide, the total momentum of the two objects before the\ncollision is equal to the total momentum after the collision, provided no\nexternal unbalanced force acts on them. This is the law of conservation of\nmomentum.\n\n| Law | Statement | Key idea |\n| --- | --- | --- |\n| First | An object keeps its state of rest or uniform motion unless an unbalanced force acts | Inertia |\n| Second | Rate of change of momentum is proportional to the applied force | F equals m times a |\n| Third | Action and reaction are equal and opposite | Forces act on two bodies |\n",
+    "page_count": 1,
+    "file_name": "force_and_laws_of_motion.md",
+    "file_type": "md",
+    "detected_hint": "mostly_text",
+    "parse_route": "lightweight_text",
+    "ocr_used": false,
+    "language_hint": "en",
+    "table_count": 1,
+    "figure_count": 0,
+    "equation_count": 0
+  },
+  "document_profile": {
+    "subject": "Physics",
+    "grade": "Class 9",
+    "difficulty": "intermediate",
+    "topic": "Force and Laws of Motion",
+    "chapter": "Chapter 8: Force and Laws of Motion",
+    "language": "en",
+    "board": "",
+    "document_type": "textbook chapter",
+    "estimated_periods": 0,
+    "confidence": 0.4
+  },
+  "knowledge_extraction": {
+    "learning_objectives": [
+      "Explain balanced and unbalanced forces",
+      "Explain first law of motion",
+      "Explain second law of motion",
+      "Explain third law of motion",
+      "Explain conservation of momentum"
+    ],
+    "prerequisites_list": [
+      "Basic familiarity with the subject vocabulary"
+    ],
+    "concepts": [
+      {
+        "id": "182922e1a47d",
+        "name": "Balanced and Unbalanced Forces",
+        "description": "Chapter 8: Force and Laws of Motion\n8.1 Balanced and Unbalanced Forces\nA force can be a push or a pull.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-0"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "47d8489acd8e",
+        "name": "First Law of Motion",
+        "description": "8.2 First Law of Motion\nAn object remains in a state of rest or of uniform motion in a straight line unless acted upon by an unbalanced external force.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-1"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "239b0eb83b3e",
+        "name": "Second Law of Motion",
+        "description": "8.3 Second Law of Motion\nThe rate of change of momentum of an object is proportional to the applied unbalanced force in the direction of the force.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-2"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "8d7b082a5ea7",
+        "name": "Third Law of Motion",
+        "description": "8.4 Third Law of Motion\nTo every action there is an equal and opposite reaction.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-3"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "94ee1dcc4489",
+        "name": "Conservation of Momentum",
+        "description": "8.5 Conservation of Momentum\nWhen two objects collide, the total momentum of the two objects before the collision is equal to the total momentum after the collision, provided no external unbalanced force acts on them.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-4"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      }
+    ],
+    "definitions": [
+      {
+        "id": "2a13cee7e873",
+        "term": "Such forces",
+        "text": "balanced forces",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-0"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "6cb4e4cf6627",
+        "term": "If the net force on an object",
+        "text": "not zero, the forces are unbalanced and the object accelerates in the direction of the net force",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-0"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "6ba25736ea42",
+        "term": "These two forces",
+        "text": "balanced, so the block stays at rest",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-0"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "d52b4b94020f",
+        "term": "This",
+        "text": "Newton's first law of motion, also called the law of inertia",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-1",
+            "chunk-3",
+            "chunk-4"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "a0adcbecd1e2",
+        "term": "Inertia",
+        "text": "natural tendency of an object to resist a change in its state of motion",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-1"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "17dac8f9aefe",
+        "term": "The mass of an object",
+        "text": "measure of its inertia",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-1"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "70f9ac32c4e0",
+        "term": "Momentum",
+        "text": "product of the mass and the velocity of an object",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-2"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "43b695871ed6",
+        "term": "One newton",
+        "text": "force that produces an acceleration of 1 metre per second squared in an object of mass 1 kilogram",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-2"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "7f8c010eb185",
+        "term": "The acceleration produced",
+        "text": "= F/m = 5/2 = 2",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-2"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "425f4f551831",
+        "term": "To every action there",
+        "text": "n equal and opposite reaction",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-3"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "8e2f6beeb5d8",
+        "term": "When a bullet",
+        "text": "fired from a gun, the gun exerts a forward force on the bullet and the bullet exerts an equal backward force on the gun",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-3"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      }
+    ],
+    "formulas": [
+      {
+        "id": "7c2fbb6749bd",
+        "name": "p",
+        "latex": "p = m * v",
+        "explanation": "",
+        "variables": [],
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "db84f84f1467",
+        "name": "F",
+        "latex": "F = m * a",
+        "explanation": "",
+        "variables": [],
+        "source_ref": null,
+        "origin": "source"
+      }
+    ],
+    "keywords": [
+      "force",
+      "forces",
+      "block",
+      "unbalanced",
+      "object",
+      "motion",
+      "inertia",
+      "state",
+      "first",
+      "second",
+      "momentum",
+      "acceleration",
+      "change",
+      "bullet",
+      "equal",
+      "reaction",
+      "exerts",
+      "forward",
+      "conservation",
+      "objects",
+      "total",
+      "collision"
+    ],
+    "examples": [
+      {
+        "id": "9d49568fafab",
+        "title": "From the text",
+        "text": "When several forces act on a body at the same time, their effects can cancel one another.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "3e8986af1c93",
+        "title": "From the text",
+        "text": "This is Newton's first law of motion, also called the law of inertia.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "d1ebcd9e503c",
+        "title": "From the text",
+        "text": "Momentum is the product of the mass and the velocity of an object.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "365aa01a2a8a",
+        "title": "From the text",
+        "text": "These forces always act on two different bodies, never on the same body.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "f4c43bc7bc8b",
+        "title": "From the text",
+        "text": "This is the law of conservation of momentum.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      }
+    ],
+    "applications": [],
+    "common_misconceptions": [],
+    "source_refs": [],
+    "concept_graph": {},
+    "key_terms_glossary": {
+      "Such forces": "balanced forces",
+      "If the net force on an object": "not zero, the forces are unbalanced and the object accelerates in the direction of the net force",
+      "These two forces": "balanced, so the block stays at rest",
+      "This": "Newton's first law of motion, also called the law of inertia",
+      "Inertia": "natural tendency of an object to resist a change in its state of motion",
+      "The mass of an object": "measure of its inertia",
+      "Momentum": "product of the mass and the velocity of an object",
+      "One newton": "force that produces an acceleration of 1 metre per second squared in an object of mass 1 kilogram",
+      "The acceleration produced": "= F/m = 5/2 = 2",
+      "To every action there": "n equal and opposite reaction"
+    }
+  },
+  "teaching_plan": {
+    "total_periods": 3,
+    "default_minutes_per_period": 40,
+    "adaptation_rationale": "Demo mode grouped 5 extracted concepts into 3 periods at two concepts per period.",
+    "periods": [
+      {
+        "id": "c840230c78ae",
+        "number": 1,
+        "title": "Balanced and Unbalanced Forces and First Law of Motion",
+        "estimated_minutes": 40,
+        "objectives": [
+          {
+            "concept_ids": [
+              "182922e1a47d"
+            ],
+            "text": "Explain balanced and unbalanced forces"
+          },
+          {
+            "concept_ids": [
+              "47d8489acd8e"
+            ],
+            "text": "Explain first law of motion"
+          }
+        ],
+        "key_concepts": [
+          "182922e1a47d",
+          "47d8489acd8e"
+        ],
+        "warmup_strategy": "Recall the previous period's key idea.",
+        "flow_summary": "Introduce and practise: Balanced and Unbalanced Forces, First Law of Motion.",
+        "prerequisite_review": [],
+        "source_chunks": [
+          "chunk-0",
+          "chunk-1"
+        ]
+      },
+      {
+        "id": "20d43fc91f76",
+        "number": 2,
+        "title": "Second Law of Motion and Third Law of Motion",
+        "estimated_minutes": 40,
+        "objectives": [
+          {
+            "concept_ids": [
+              "239b0eb83b3e"
+            ],
+            "text": "Explain second law of motion"
+          },
+          {
+            "concept_ids": [
+              "8d7b082a5ea7"
+            ],
+            "text": "Explain third law of motion"
+          }
+        ],
+        "key_concepts": [
+          "239b0eb83b3e",
+          "8d7b082a5ea7"
+        ],
+        "warmup_strategy": "Recall the previous period's key idea.",
+        "flow_summary": "Introduce and practise: Second Law of Motion, Third Law of Motion.",
+        "prerequisite_review": [],
+        "source_chunks": [
+          "chunk-2",
+          "chunk-3"
+        ]
+      },
+      {
+        "id": "63156b11c975",
+        "number": 3,
+        "title": "Conservation of Momentum",
+        "estimated_minutes": 40,
+        "objectives": [
+          {
+            "concept_ids": [
+              "94ee1dcc4489"
+            ],
+            "text": "Explain conservation of momentum"
+          }
+        ],
+        "key_concepts": [
+          "94ee1dcc4489"
+        ],
+        "warmup_strategy": "Recall the previous period's key idea.",
+        "flow_summary": "Introduce and practise: Conservation of Momentum.",
+        "prerequisite_review": [],
+        "source_chunks": [
+          "chunk-4"
+        ]
+      }
+    ],
+    "sequence_map": {
+      "1": [
+        "182922e1a47d",
+        "47d8489acd8e"
+      ],
+      "2": [
+        "239b0eb83b3e",
+        "8d7b082a5ea7"
+      ],
+      "3": [
+        "94ee1dcc4489"
+      ]
+    },
+    "cross_period_review_points": [
+      "Balanced and Unbalanced Forces",
+      "First Law of Motion",
+      "Second Law of Motion"
+    ]
+  },
+  "classroom_content": [
+    {
+      "period_id": "c840230c78ae",
+      "warmup": "Ask students what they already associate with balanced and unbalanced forces and first law of motion.",
+      "teacher_script": "Begin by naming today's focus: Balanced and Unbalanced Forces and First Law of Motion. [chunk-0 — Chapter 8: Force and Laws of Motion > 8.1 Balanced and Unbalanced Forces]\nChapter 8: Force and Laws of Motion\n8.1 Balanced and Unbalanced Forces\nA force can be a push or a pull. When several forces act on a body at the same time, their effects can cancel one another. Such forces are called balanced forces. If the net force on an object is not zero, the forces are unbalanced and the object accelerates in the direction of the net force. Pause after each idea and ask a student to restate it in their own words.",
+      "blackboard_notes": "Balanced and Unbalanced Forces and First Law of Motion\n- [chunk-0 — Chapter 8: Force and Laws of Motion > 8.1 Balanced and Unbalanced Forces]\nChapter 8: Force and Laws\n- When several forces act on a body at the same time, their effects can cancel one another.\n- Such forces are called balanced forces.\n- If the net force on an object is not zero, the forces are unbalanced and the object accelerates in the directi",
+      "checkpoint_questions": [
+        "In one sentence, what is balanced and unbalanced forces and first law of motion?",
+        "Give one example of balanced and unbalanced forces and first law of motion from the chapter.",
+        "Which part of today's lesson is still unclear?"
+      ],
+      "exit_ticket": "Write two sentences explaining balanced and unbalanced forces and first law of motion.",
+      "homework": "Re-read the section on balanced and unbalanced forces and first law of motion and answer the textbook questions.",
+      "mentor_moment": "Every expert was once a beginner who kept asking questions. Confusion is a sign you are working at the edge of what you know.",
+      "supporting_resources": []
+    },
+    {
+      "period_id": "20d43fc91f76",
+      "warmup": "Ask students what they already associate with second law of motion and third law of motion.",
+      "teacher_script": "Begin by naming today's focus: Second Law of Motion and Third Law of Motion. [chunk-2 — Chapter 8: Force and Laws of Motion > 8.3 Second Law of Motion]\n8.3 Second Law of Motion\nThe rate of change of momentum of an object is proportional to the applied unbalanced force in the direction of the force. Momentum is the product of the mass and the velocity of an object. p = m * v\nThe second law can be written in the familiar form:\nF = m * a\nwhere F is the force applied, m is the mass of the object, and a is the acceleration produced. The SI unit of force is the newton (N). Pause after each idea and ask a student to restate it in their own words.",
+      "blackboard_notes": "Second Law of Motion and Third Law of Motion\n- [chunk-2 — Chapter 8: Force and Laws of Motion > 8.3 Second Law of Motion]\n8.3 Second Law of Motion\nThe rate o\n- Momentum is the product of the mass and the velocity of an object.\n- p = m * v\nThe second law can be written in the familiar form:\nF = m * a\nwhere F is the force applied, m is the\n- The SI unit of force is the newton (N).",
+      "checkpoint_questions": [
+        "In one sentence, what is second law of motion and third law of motion?",
+        "Give one example of second law of motion and third law of motion from the chapter.",
+        "Which part of today's lesson is still unclear?"
+      ],
+      "exit_ticket": "Write two sentences explaining second law of motion and third law of motion.",
+      "homework": "Re-read the section on second law of motion and third law of motion and answer the textbook questions.",
+      "mentor_moment": "Every expert was once a beginner who kept asking questions. Confusion is a sign you are working at the edge of what you know.",
+      "supporting_resources": []
+    },
+    {
+      "period_id": "63156b11c975",
+      "warmup": "Ask students what they already associate with conservation of momentum.",
+      "teacher_script": "Begin by naming today's focus: Conservation of Momentum. [chunk-4 — Chapter 8: Force and Laws of Motion > 8.5 Conservation of Momentum]\n8.5 Conservation of Momentum\nWhen two objects collide, the total momentum of the two objects before the collision is equal to the total momentum after the collision, provided no external unbalanced force acts on them. This is the law of conservation of momentum. | Law | Statement | Key idea |\n| --- | --- | --- |\n| First | An object keeps its state of rest or uniform motion unless an unbalanced force acts | Inertia |\n| Second | Rate of change of momentum is proportional to the applied force | F equals m times a |\n| Third | Action and reaction are equal and opposite | Forces act on two bodies | Pause after each idea and ask a student to restate it in their own words.",
+      "blackboard_notes": "Conservation of Momentum\n- [chunk-4 — Chapter 8: Force and Laws of Motion > 8.5 Conservation of Momentum]\n8.5 Conservation of Momentum\nWh\n- This is the law of conservation of momentum.\n- | Law | Statement | Key idea |\n| --- | --- | --- |\n| First | An object keeps its state of rest or uniform moti",
+      "checkpoint_questions": [
+        "In one sentence, what is conservation of momentum?",
+        "Give one example of conservation of momentum from the chapter.",
+        "Which part of today's lesson is still unclear?"
+      ],
+      "exit_ticket": "Write two sentences explaining conservation of momentum.",
+      "homework": "Re-read the section on conservation of momentum and answer the textbook questions.",
+      "mentor_moment": "Every expert was once a beginner who kept asking questions. Confusion is a sign you are working at the edge of what you know.",
+      "supporting_resources": []
+    }
+  ],
+  "activities": [
+    {
+      "id": "6a67c89791e1",
+      "title": "Think Pair Share: Period 1: Balanced and Unbalanced Forces and First Law of Motion",
+      "activity_type": "think_pair_share",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is period 1: balanced and unbalanced forces and first law of motion?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of period 1: balanced and unbalanced forces and first law of motion.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "295dbfff2703",
+      "title": "Demonstration: Period 2: Second Law of Motion and Third Law of Motion",
+      "activity_type": "demonstration",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is period 2: second law of motion and third law of motion?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of period 2: second law of motion and third law of motion.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "501ebb59c9f0",
+      "title": "Group Task: Period 3: Conservation of Momentum",
+      "activity_type": "group_task",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is period 3: conservation of momentum?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of period 3: conservation of momentum.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "d75b93e98787",
+      "title": "Worksheet: Balanced and Unbalanced Forces",
+      "activity_type": "worksheet",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is balanced and unbalanced forces?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of balanced and unbalanced forces.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [
+        "182922e1a47d"
+      ],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "7d670e743bd4",
+      "title": "Discussion: First Law of Motion",
+      "activity_type": "discussion",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is first law of motion?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of first law of motion.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [
+        "47d8489acd8e"
+      ],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "5ac4911f034a",
+      "title": "Think Pair Share: Second Law of Motion",
+      "activity_type": "think_pair_share",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is second law of motion?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of second law of motion.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [
+        "239b0eb83b3e"
+      ],
+      "origin": "pedagogical"
+    }
+  ],
+  "assessments": {
+    "items": {
+      "mcqs": [
+        {
+          "id": "eacb168157e1",
+          "stem": "Which statement best describes balanced and unbalanced forces?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of balanced and unbalanced forces given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines balanced and unbalanced forces directly.",
+          "difficulty": "intermediate",
+          "bloom_level": "understand",
+          "linked_concept_ids": [
+            "182922e1a47d"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "bd51ff00fe51",
+          "stem": "Which statement best describes first law of motion?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of first law of motion given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines first law of motion directly.",
+          "difficulty": "foundational",
+          "bloom_level": "remember",
+          "linked_concept_ids": [
+            "47d8489acd8e"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "9a812fd49fe4",
+          "stem": "Which statement best describes second law of motion?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of second law of motion given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines second law of motion directly.",
+          "difficulty": "intermediate",
+          "bloom_level": "understand",
+          "linked_concept_ids": [
+            "239b0eb83b3e"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "b2d09d837f69",
+          "stem": "Which statement best describes third law of motion?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of third law of motion given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines third law of motion directly.",
+          "difficulty": "foundational",
+          "bloom_level": "remember",
+          "linked_concept_ids": [
+            "8d7b082a5ea7"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "b15fc7301430",
+          "stem": "Which statement best describes conservation of momentum?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of conservation of momentum given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines conservation of momentum directly.",
+          "difficulty": "intermediate",
+          "bloom_level": "understand",
+          "linked_concept_ids": [
+            "94ee1dcc4489"
+          ],
+          "marks": 1
+        }
+      ],
+      "short_answers": [
+        {
+          "id": "1c003119e469",
+          "question": "Explain balanced and unbalanced forces in two or three sentences.",
+          "model_answer": "A correct explanation of balanced and unbalanced forces as presented in the chapter.",
+          "key_points": [
+            "Balanced and Unbalanced Forces"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "182922e1a47d"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "8d433f8b035f",
+          "question": "Explain first law of motion in two or three sentences.",
+          "model_answer": "A correct explanation of first law of motion as presented in the chapter.",
+          "key_points": [
+            "First Law of Motion"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "47d8489acd8e"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "127544c7e769",
+          "question": "Explain second law of motion in two or three sentences.",
+          "model_answer": "A correct explanation of second law of motion as presented in the chapter.",
+          "key_points": [
+            "Second Law of Motion"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "239b0eb83b3e"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "cd28f046e698",
+          "question": "Explain third law of motion in two or three sentences.",
+          "model_answer": "A correct explanation of third law of motion as presented in the chapter.",
+          "key_points": [
+            "Third Law of Motion"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "8d7b082a5ea7"
+          ],
+          "rubric": {}
+        }
+      ],
+      "long_answers": [
+        {
+          "id": "85267e1f1f8c",
+          "question": "Discuss balanced and unbalanced forces with an example from the chapter.",
+          "marking_scheme": "2 marks definition, 2 marks example, 1 mark clarity.",
+          "word_limit": 250,
+          "marks": 5,
+          "linked_concept_ids": [
+            "182922e1a47d"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "149358b7e2bd",
+          "question": "Discuss first law of motion with an example from the chapter.",
+          "marking_scheme": "2 marks definition, 2 marks example, 1 mark clarity.",
+          "word_limit": 250,
+          "marks": 5,
+          "linked_concept_ids": [
+            "47d8489acd8e"
+          ],
+          "rubric": {}
+        }
+      ],
+      "numericals": [],
+      "total_marks": 23,
+      "coverage_map": {
+        "182922e1a47d": [
+          "eacb168157e1",
+          "1c003119e469",
+          "85267e1f1f8c"
+        ],
+        "47d8489acd8e": [
+          "bd51ff00fe51",
+          "8d433f8b035f",
+          "149358b7e2bd"
+        ],
+        "239b0eb83b3e": [
+          "9a812fd49fe4",
+          "127544c7e769"
+        ],
+        "8d7b082a5ea7": [
+          "b2d09d837f69",
+          "cd28f046e698"
+        ],
+        "94ee1dcc4489": [
+          "b15fc7301430"
+        ]
+      }
+    },
+    "answer_key": {
+      "eacb168157e1": "A",
+      "bd51ff00fe51": "A",
+      "9a812fd49fe4": "A",
+      "b2d09d837f69": "A",
+      "b15fc7301430": "A",
+      "1c003119e469": "A correct explanation of balanced and unbalanced forces as presented in the chapter.",
+      "8d433f8b035f": "A correct explanation of first law of motion as presented in the chapter.",
+      "127544c7e769": "A correct explanation of second law of motion as presented in the chapter.",
+      "cd28f046e698": "A correct explanation of third law of motion as presented in the chapter."
+    },
+    "blueprint": {
+      "understand": 3,
+      "remember": 2
+    }
+  },
+  "gap_analysis": {
+    "misconceptions": [
+      {
+        "id": "020d54b90332",
+        "misconception": "Students often confuse balanced and unbalanced forces with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe balanced and unbalanced forces and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast balanced and unbalanced forces against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "182922e1a47d"
+        ]
+      },
+      {
+        "id": "86ee1d5d9e67",
+        "misconception": "Students often confuse first law of motion with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe first law of motion and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast first law of motion against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "47d8489acd8e"
+        ]
+      },
+      {
+        "id": "466c52644a01",
+        "misconception": "Students often confuse second law of motion with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe second law of motion and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast second law of motion against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "239b0eb83b3e"
+        ]
+      },
+      {
+        "id": "462a10dc0e4d",
+        "misconception": "Students often confuse third law of motion with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe third law of motion and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast third law of motion against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "8d7b082a5ea7"
+        ]
+      },
+      {
+        "id": "edf68ed1fd59",
+        "misconception": "Students often confuse conservation of momentum with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe conservation of momentum and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast conservation of momentum against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "94ee1dcc4489"
+        ]
+      }
+    ],
+    "coverage_score": 1.0,
+    "remediation_summary": "Demo mode produced generic misconceptions. Configure a real model for a genuine diagnostic analysis."
+  },
+  "validation": {
+    "schema_check": {
+      "status": "pass",
+      "missing_fields": [],
+      "extra_fields": []
+    },
+    "grounding_check": {
+      "status": "pass",
+      "ungrounded_claims": [],
+      "hallucination_risk": 0.0
+    },
+    "consistency_check": {
+      "status": "pass",
+      "issues": []
+    },
+    "pedagogical_check": {
+      "status": "warn",
+      "notes": [
+        "All MCQs sit at recall/understanding level; higher-order items would strengthen the pack"
+      ],
+      "bloom_distribution": {
+        "understand": 3,
+        "remember": 2
+      }
+    },
+    "overall_status": "warn",
+    "regen_suggestions": []
+  },
+  "exports": {
+    "json_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-force_and_laws_of_motion\\TeacherKnowledgePackage.json",
+    "lesson_plan_pdf_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-force_and_laws_of_motion\\LessonPlan.pdf",
+    "teacher_guide_pdf_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-force_and_laws_of_motion\\TeacherGuide.pdf",
+    "assessment_pack_pdf_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-force_and_laws_of_motion\\AssessmentPack.pdf"
+  }
+}

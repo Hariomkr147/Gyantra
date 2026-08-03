@@ -1,0 +1,32 @@
+# --- web framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# --- config & validation ---
+pydantic==2.10.4
+pydantic-settings>=2.7.0,<3.0.0
+
+# --- persistence ---
+aiosqlite==0.20.0
+
+# --- http client for LLM providers ---
+httpx==0.28.1
+
+# --- document parsing ---
+PyMuPDF==1.25.1
+python-docx>=1.2.0,<2.0.0
+python-pptx==1.0.2
+
+# --- export ---
+reportlab==4.2.5
+
+# --- testing ---
+pytest==8.3.4
+pytest-asyncio==0.25.0
+
+# --- primary document parser (optional) ---
+# Docling gives real reading order, table structure and heading hierarchy.
+# Large install (pulls torch). If absent, the built-in parsers are used
+# automatically — see app/parsers/router.py.
+# docling==2.117.0  # Commented out for free tier deployment (too large, requires PyTorch)

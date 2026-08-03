@@ -1,0 +1,1177 @@
+{
+  "metadata": {
+    "job_id": "sample-nationalism_in_india",
+    "created_at": "2026-08-02T12:04:41.193998+00:00",
+    "pipeline_version": "1.0.0",
+    "source_file": "nationalism_in_india.md",
+    "processing_time_seconds": 0.03,
+    "model_calls": 15,
+    "total_tokens_used": 14338,
+    "models_used": [
+      "demo/stub"
+    ],
+    "demo_mode": true
+  },
+  "document_intelligence": {
+    "metadata": {
+      "line_count": 114,
+      "block_count": 27,
+      "routing": {
+        "reason": "plain text file"
+      },
+      "route_chosen": "lightweight_text"
+    },
+    "blocks": [
+      {
+        "id": "81cc38fb0412",
+        "block_type": "heading",
+        "content": "Chapter 2: Nationalism in India",
+        "level": 1,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "16e6589d0660",
+        "block_type": "heading",
+        "content": "2.1 The First World War, Khilafat and Non-Cooperation",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "23c6f27749da",
+        "block_type": "paragraph",
+        "content": "The First World War created a new economic and political situation in India. It led to a huge increase in defence expenditure, which was financed by war loans and increasing taxes. Prices increased, doubling between 1913 and 1918, leading to extreme hardship for the common people.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "8a4e63c3ef80",
+        "block_type": "paragraph",
+        "content": "Villages were called upon to supply soldiers, and the forced recruitment in rural areas caused widespread anger. In 1918 and 1919, crops failed in many parts of India, resulting in acute shortages of food. This was accompanied by an influenza epidemic. According to the census of 1921, 12 to 13 million people perished as a result of famines and the epidemic.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "0a9fb6673224",
+        "block_type": "paragraph",
+        "content": "People hoped that their hardships would end after the war was over. That did not happen.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "0ed27734ee65",
+        "block_type": "heading",
+        "content": "2.2 The Idea of Satyagraha",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "4c2f982ed83e",
+        "block_type": "paragraph",
+        "content": "Mahatma Gandhi returned to India in January 1915 from South Africa. His heroic fight against the racist regime there had made him famous. He had also come to respect the strength of the Indian community abroad.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "54c45dbca62e",
+        "block_type": "paragraph",
+        "content": "Gandhi's novel method of mass agitation was called satyagraha. The idea of satyagraha emphasised the power of truth and the need to search for truth. It suggested that if the cause was true, if the struggle was against injustice, then physical force was not necessary to fight the oppressor.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "cc0598a1507f",
+        "block_type": "paragraph",
+        "content": "Satyagraha was not passive resistance. It required courage. Without seeking vengeance or being aggressive, a satyagrahi could win the battle through non-violence. This could be done by appealing to the conscience of the oppressor. People, including the oppressors, had to be persuaded to see the truth, instead of being forced to accept truth through the use of violence.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "46247b253954",
+        "block_type": "paragraph",
+        "content": "By this struggle, truth was bound to ultimately triumph. Gandhi believed that this dharma of non-violence could unite all Indians.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "d7d1e3effa22",
+        "block_type": "heading",
+        "content": "2.3 The Rowlatt Act and Jallianwala Bagh",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "a81561dbf810",
+        "block_type": "paragraph",
+        "content": "In 1919 Gandhi decided to launch a nationwide satyagraha against the proposed Rowlatt Act of 1919. This Act had been hurriedly passed through the Imperial Legislative Council despite the united opposition of the Indian members. It gave the government enormous powers to repress political activities, and allowed detention of political prisoners without trial for two years.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "6f74c4535edf",
+        "block_type": "paragraph",
+        "content": "Rallies were organised in various cities, workers went on strike in railway workshops, and shops closed down. Alarmed by the popular upsurge, the British administration decided to clamp down on nationalists.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "0cc406cfdd33",
+        "block_type": "paragraph",
+        "content": "On 13 April 1919 the infamous Jallianwala Bagh incident took place. A large crowd gathered in the enclosed ground of Jallianwala Bagh in Amritsar. Some came to protest against the government's new repressive measures. Others had come to attend the annual Baisakhi fair.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "ef086bdcdf44",
+        "block_type": "paragraph",
+        "content": "General Dyer entered the area, blocked the exit points, and opened fire on the crowd, killing hundreds. His object, as he declared later, was to produce a moral effect, to create in the minds of satyagrahis a feeling of terror and awe.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "2224a6b46423",
+        "block_type": "paragraph",
+        "content": "As the news of Jallianwala Bagh spread, crowds took to the streets in many north Indian towns. Seeing violence spread, Mahatma Gandhi called off the movement.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "2005e6af175c",
+        "block_type": "heading",
+        "content": "2.4 Differing Strands within the Movement",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "824e6de51040",
+        "block_type": "paragraph",
+        "content": "The Non-Cooperation Movement began in January 1921. Different social groups participated in this movement, each with its own specific aspiration. All of them responded to the call of Swaraj, but the term meant different things to different people.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "2b10aa133d7a",
+        "block_type": "paragraph",
+        "content": "In the towns the movement started with middle-class participation. Thousands of students left government-controlled schools and colleges, headmasters and teachers resigned, and lawyers gave up their legal practices. The council elections were boycotted in most provinces except Madras.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "94f1e52db2f6",
+        "block_type": "paragraph",
+        "content": "The effects of non-cooperation on the economic front were dramatic. Foreign goods were boycotted, liquor shops picketed, and foreign cloth burnt in huge bonfires. The import of foreign cloth halved between 1921 and 1922, its value dropping from Rs 102 crore to Rs 57 crore.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "c23f6de636c0",
+        "block_type": "paragraph",
+        "content": "The movement in the countryside drew into its fold the struggles of peasants and tribals. In Awadh, peasants were led by Baba Ramchandra, a sanyasi who had earlier been to Fiji as an indentured labourer. The movement here was against talukdars and landlords who demanded from peasants exorbitantly high rents and a variety of other cesses.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "30b8bbc15eed",
+        "block_type": "table",
+        "content": "| Group | What Swaraj meant to them |\n| --- | --- |\n| Urban middle class | Political freedom and an end to colonial rule |\n| Awadh peasants | Reduction of revenue, abolition of begar |\n| Tribals of Gudem | Right to use forest land, freedom from contractors |\n| Plantation workers | Freedom to move in and out of confined space |",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "9d49840c3c05",
+        "block_type": "heading",
+        "content": "2.5 The Sense of Collective Belonging",
+        "level": 2,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "0d35d772a511",
+        "block_type": "paragraph",
+        "content": "Nationalism spreads when people begin to believe that they are all part of the same nation, when they discover some unity that binds them together. History and fiction, folklore and songs, popular prints and symbols all played a part in the making of nationalism.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "79d28b245383",
+        "block_type": "paragraph",
+        "content": "The identity of the nation is most often symbolised in a figure or an image. This helps create an image with which people can identify the nation. In the twentieth century, the identity of India came to be visually associated with the image of Bharat Mata.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "2fe7d8ceace4",
+        "block_type": "paragraph",
+        "content": "Indian folklore also became a means of promoting nationalist ideas. In late nineteenth-century India, nationalists began recording folk tales sung by bards, and they toured villages gathering folk songs and legends.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      },
+      {
+        "id": "8208b26b0e92",
+        "block_type": "paragraph",
+        "content": "Icons and symbols helped in unifying people and inspiring in them a feeling of nationalism. During the Swadeshi movement in Bengal, a tricolour flag was designed. By 1921, Gandhi had designed the Swaraj flag, again a tricolour, and it had a spinning wheel in the centre, representing the Gandhian ideal of self-help.",
+        "level": 0,
+        "page": null,
+        "bbox": null,
+        "caption": null,
+        "raw_html": null,
+        "origin": "source"
+      }
+    ],
+    "plain_text": "# Chapter 2: Nationalism in India\n\n## 2.1 The First World War, Khilafat and Non-Cooperation\n\nThe First World War created a new economic and political situation in India. It\nled to a huge increase in defence expenditure, which was financed by war loans\nand increasing taxes. Prices increased, doubling between 1913 and 1918, leading\nto extreme hardship for the common people.\n\nVillages were called upon to supply soldiers, and the forced recruitment in\nrural areas caused widespread anger. In 1918 and 1919, crops failed in many\nparts of India, resulting in acute shortages of food. This was accompanied by an\ninfluenza epidemic. According to the census of 1921, 12 to 13 million people\nperished as a result of famines and the epidemic.\n\nPeople hoped that their hardships would end after the war was over. That did not\nhappen.\n\n## 2.2 The Idea of Satyagraha\n\nMahatma Gandhi returned to India in January 1915 from South Africa. His heroic\nfight against the racist regime there had made him famous. He had also come to\nrespect the strength of the Indian community abroad.\n\nGandhi's novel method of mass agitation was called satyagraha. The idea of\nsatyagraha emphasised the power of truth and the need to search for truth. It\nsuggested that if the cause was true, if the struggle was against injustice,\nthen physical force was not necessary to fight the oppressor.\n\nSatyagraha was not passive resistance. It required courage. Without seeking\nvengeance or being aggressive, a satyagrahi could win the battle through\nnon-violence. This could be done by appealing to the conscience of the\noppressor. People, including the oppressors, had to be persuaded to see the\ntruth, instead of being forced to accept truth through the use of violence.\n\nBy this struggle, truth was bound to ultimately triumph. Gandhi believed that\nthis dharma of non-violence could unite all Indians.\n\n## 2.3 The Rowlatt Act and Jallianwala Bagh\n\nIn 1919 Gandhi decided to launch a nationwide satyagraha against the proposed\nRowlatt Act of 1919. This Act had been hurriedly passed through the Imperial\nLegislative Council despite the united opposition of the Indian members. It gave\nthe government enormous powers to repress political activities, and allowed\ndetention of political prisoners without trial for two years.\n\nRallies were organised in various cities, workers went on strike in railway\nworkshops, and shops closed down. Alarmed by the popular upsurge, the British\nadministration decided to clamp down on nationalists.\n\nOn 13 April 1919 the infamous Jallianwala Bagh incident took place. A large\ncrowd gathered in the enclosed ground of Jallianwala Bagh in Amritsar. Some came\nto protest against the government's new repressive measures. Others had come to\nattend the annual Baisakhi fair.\n\nGeneral Dyer entered the area, blocked the exit points, and opened fire on the\ncrowd, killing hundreds. His object, as he declared later, was to produce a\nmoral effect, to create in the minds of satyagrahis a feeling of terror and awe.\n\nAs the news of Jallianwala Bagh spread, crowds took to the streets in many north\nIndian towns. Seeing violence spread, Mahatma Gandhi called off the movement.\n\n## 2.4 Differing Strands within the Movement\n\nThe Non-Cooperation Movement began in January 1921. Different social groups\nparticipated in this movement, each with its own specific aspiration. All of\nthem responded to the call of Swaraj, but the term meant different things to\ndifferent people.\n\nIn the towns the movement started with middle-class participation. Thousands of\nstudents left government-controlled schools and colleges, headmasters and\nteachers resigned, and lawyers gave up their legal practices. The council\nelections were boycotted in most provinces except Madras.\n\nThe effects of non-cooperation on the economic front were dramatic. Foreign\ngoods were boycotted, liquor shops picketed, and foreign cloth burnt in huge\nbonfires. The import of foreign cloth halved between 1921 and 1922, its value\ndropping from Rs 102 crore to Rs 57 crore.\n\nThe movement in the countryside drew into its fold the struggles of peasants and\ntribals. In Awadh, peasants were led by Baba Ramchandra, a sanyasi who had\nearlier been to Fiji as an indentured labourer. The movement here was against\ntalukdars and landlords who demanded from peasants exorbitantly high rents and a\nvariety of other cesses.\n\n| Group | What Swaraj meant to them |\n| --- | --- |\n| Urban middle class | Political freedom and an end to colonial rule |\n| Awadh peasants | Reduction of revenue, abolition of begar |\n| Tribals of Gudem | Right to use forest land, freedom from contractors |\n| Plantation workers | Freedom to move in and out of confined space |\n\n## 2.5 The Sense of Collective Belonging\n\nNationalism spreads when people begin to believe that they are all part of the\nsame nation, when they discover some unity that binds them together. History and\nfiction, folklore and songs, popular prints and symbols all played a part in the\nmaking of nationalism.\n\nThe identity of the nation is most often symbolised in a figure or an image.\nThis helps create an image with which people can identify the nation. In the\ntwentieth century, the identity of India came to be visually associated with the\nimage of Bharat Mata.\n\nIndian folklore also became a means of promoting nationalist ideas. In late\nnineteenth-century India, nationalists began recording folk tales sung by bards,\nand they toured villages gathering folk songs and legends.\n\nIcons and symbols helped in unifying people and inspiring in them a feeling of\nnationalism. During the Swadeshi movement in Bengal, a tricolour flag was\ndesigned. By 1921, Gandhi had designed the Swaraj flag, again a tricolour, and\nit had a spinning wheel in the centre, representing the Gandhian ideal of\nself-help.\n",
+    "page_count": 1,
+    "file_name": "nationalism_in_india.md",
+    "file_type": "md",
+    "detected_hint": "mostly_text",
+    "parse_route": "lightweight_text",
+    "ocr_used": false,
+    "language_hint": "en",
+    "table_count": 1,
+    "figure_count": 0,
+    "equation_count": 0
+  },
+  "document_profile": {
+    "subject": "History",
+    "grade": "Class 10",
+    "difficulty": "intermediate",
+    "topic": "Nationalism in India",
+    "chapter": "Chapter 2: Nationalism in India",
+    "language": "en",
+    "board": "",
+    "document_type": "textbook chapter",
+    "estimated_periods": 0,
+    "confidence": 0.4
+  },
+  "knowledge_extraction": {
+    "learning_objectives": [
+      "Explain the first world war, khilafat and non-cooperation",
+      "Explain the idea of satyagraha",
+      "Explain the rowlatt act and jallianwala bagh",
+      "Explain differing strands within the movement",
+      "Explain the sense of collective belonging"
+    ],
+    "prerequisites_list": [
+      "Basic familiarity with the subject vocabulary"
+    ],
+    "concepts": [
+      {
+        "id": "5169c1deab4e",
+        "name": "The First World War, Khilafat and Non-Cooperation",
+        "description": "Chapter 2: Nationalism in India\n2.1 The First World War, Khilafat and Non-Cooperation\nThe First World War created a new economic and political situation in India.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-0"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "174a371ed343",
+        "name": "The Idea of Satyagraha",
+        "description": "2.2 The Idea of Satyagraha\nMahatma Gandhi returned to India in January 1915 from South Africa.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-1"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "e79780665722",
+        "name": "The Rowlatt Act and Jallianwala Bagh",
+        "description": "2.3 The Rowlatt Act and Jallianwala Bagh\nIn 1919 Gandhi decided to launch a nationwide satyagraha against the proposed Rowlatt Act of 1919.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-2"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "465a4c570128",
+        "name": "Differing Strands within the Movement",
+        "description": "2.4 Differing Strands within the Movement\nThe Non-Cooperation Movement began in January 1921.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-3"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      },
+      {
+        "id": "95879da466e8",
+        "name": "The Sense of Collective Belonging",
+        "description": "2.5 The Sense of Collective Belonging\nNationalism spreads when people begin to believe that they are all part of the same nation, when they discover some unity that binds them together.",
+        "bloom_level": "understand",
+        "difficulty": "intermediate",
+        "prerequisites": [],
+        "is_core": true,
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-4"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      }
+    ],
+    "definitions": [
+      {
+        "id": "0d903b1a20ee",
+        "term": "The identity of the nation",
+        "text": "most often symbolised in a figure or an image",
+        "source_ref": {
+          "block_ids": [],
+          "chunk_ids": [
+            "chunk-4"
+          ],
+          "pages": [],
+          "snippet": ""
+        },
+        "origin": "source"
+      }
+    ],
+    "formulas": [],
+    "keywords": [
+      "india",
+      "people",
+      "first",
+      "world",
+      "epidemic",
+      "chapter",
+      "truth",
+      "satyagraha",
+      "gandhi",
+      "could",
+      "violence",
+      "fight",
+      "jallianwala",
+      "rowlatt",
+      "decided",
+      "against",
+      "indian",
+      "movement",
+      "peasants",
+      "different",
+      "foreign",
+      "freedom",
+      "cooperation",
+      "nationalism",
+      "nation",
+      "image",
+      "folklore",
+      "songs"
+    ],
+    "examples": [
+      {
+        "id": "177fb720b991",
+        "title": "From the text",
+        "text": "It led to a huge increase in defence expenditure, which was financed by war loans and increasing taxes.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "89383dc3d924",
+        "title": "From the text",
+        "text": "His heroic fight against the racist regime there had made him famous.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "05541b1419db",
+        "title": "From the text",
+        "text": "This Act had been hurriedly passed through the Imperial Legislative Council despite the united opposition of the Indian members.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "da7de58a3c18",
+        "title": "From the text",
+        "text": "Different social groups participated in this movement, each with its own specific aspiration.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      },
+      {
+        "id": "b4e2aa9eda7b",
+        "title": "From the text",
+        "text": "History and fiction, folklore and songs, popular prints and symbols all played a part in the making of nationalism.",
+        "is_solved": false,
+        "source_ref": null,
+        "origin": "source"
+      }
+    ],
+    "applications": [],
+    "common_misconceptions": [],
+    "source_refs": [],
+    "concept_graph": {},
+    "key_terms_glossary": {
+      "The identity of the nation": "most often symbolised in a figure or an image"
+    }
+  },
+  "teaching_plan": {
+    "total_periods": 3,
+    "default_minutes_per_period": 40,
+    "adaptation_rationale": "Demo mode grouped 5 extracted concepts into 3 periods at two concepts per period.",
+    "periods": [
+      {
+        "id": "0c3dbdfd56ab",
+        "number": 1,
+        "title": "The First World War, Khilafat and Non-Cooperation and The Idea of Satyagraha",
+        "estimated_minutes": 40,
+        "objectives": [
+          {
+            "concept_ids": [
+              "5169c1deab4e"
+            ],
+            "text": "Explain the first world war, khilafat and non-cooperation"
+          },
+          {
+            "concept_ids": [
+              "174a371ed343"
+            ],
+            "text": "Explain the idea of satyagraha"
+          }
+        ],
+        "key_concepts": [
+          "5169c1deab4e",
+          "174a371ed343"
+        ],
+        "warmup_strategy": "Recall the previous period's key idea.",
+        "flow_summary": "Introduce and practise: The First World War, Khilafat and Non-Cooperation, The Idea of Satyagraha.",
+        "prerequisite_review": [],
+        "source_chunks": [
+          "chunk-0",
+          "chunk-1"
+        ]
+      },
+      {
+        "id": "a91488c34fca",
+        "number": 2,
+        "title": "The Rowlatt Act and Jallianwala Bagh and Differing Strands within the Movement",
+        "estimated_minutes": 40,
+        "objectives": [
+          {
+            "concept_ids": [
+              "e79780665722"
+            ],
+            "text": "Explain the rowlatt act and jallianwala bagh"
+          },
+          {
+            "concept_ids": [
+              "465a4c570128"
+            ],
+            "text": "Explain differing strands within the movement"
+          }
+        ],
+        "key_concepts": [
+          "e79780665722",
+          "465a4c570128"
+        ],
+        "warmup_strategy": "Recall the previous period's key idea.",
+        "flow_summary": "Introduce and practise: The Rowlatt Act and Jallianwala Bagh, Differing Strands within the Movement.",
+        "prerequisite_review": [],
+        "source_chunks": [
+          "chunk-2",
+          "chunk-3"
+        ]
+      },
+      {
+        "id": "475b38bcb7c1",
+        "number": 3,
+        "title": "The Sense of Collective Belonging",
+        "estimated_minutes": 40,
+        "objectives": [
+          {
+            "concept_ids": [
+              "95879da466e8"
+            ],
+            "text": "Explain the sense of collective belonging"
+          }
+        ],
+        "key_concepts": [
+          "95879da466e8"
+        ],
+        "warmup_strategy": "Recall the previous period's key idea.",
+        "flow_summary": "Introduce and practise: The Sense of Collective Belonging.",
+        "prerequisite_review": [],
+        "source_chunks": [
+          "chunk-4"
+        ]
+      }
+    ],
+    "sequence_map": {
+      "1": [
+        "5169c1deab4e",
+        "174a371ed343"
+      ],
+      "2": [
+        "e79780665722",
+        "465a4c570128"
+      ],
+      "3": [
+        "95879da466e8"
+      ]
+    },
+    "cross_period_review_points": [
+      "The First World War, Khilafat and Non-Cooperation",
+      "The Idea of Satyagraha",
+      "The Rowlatt Act and Jallianwala Bagh"
+    ]
+  },
+  "classroom_content": [
+    {
+      "period_id": "0c3dbdfd56ab",
+      "warmup": "Ask students what they already associate with the first world war, khilafat and non-cooperation and the idea of satyagraha.",
+      "teacher_script": "Begin by naming today's focus: The First World War, Khilafat and Non-Cooperation and The Idea of Satyagraha. [chunk-0 — Chapter 2: Nationalism in India > 2.1 The First World War, Khilafat and Non-Cooperation]\nChapter 2: Nationalism in India\n2.1 The First World War, Khilafat and Non-Cooperation\nThe First World War created a new economic and political situation in India. It led to a huge increase in defence expenditure, which was financed by war loans and increasing taxes. Prices increased, doubling between 1913 and 1918, leading to extreme hardship for the common people. Villages were called upon to supply soldiers, and the forced recruitment in rural areas caused widespread anger. Pause after each idea and ask a student to restate it in their own words.",
+      "blackboard_notes": "The First World War, Khilafat and Non-Cooperation and The Idea of Satyagraha\n- [chunk-0 — Chapter 2: Nationalism in India > 2.1 The First World War, Khilafat and Non-Cooperation]\nChapter 2:\n- It led to a huge increase in defence expenditure, which was financed by war loans and increasing taxes.\n- Prices increased, doubling between 1913 and 1918, leading to extreme hardship for the common people.\n- Villages were called upon to supply soldiers, and the forced recruitment in rural areas caused widespread ange",
+      "checkpoint_questions": [
+        "In one sentence, what is the first world war, khilafat and non-cooperation and the idea of satyagraha?",
+        "Give one example of the first world war, khilafat and non-cooperation and the idea of satyagraha from the chapter.",
+        "Which part of today's lesson is still unclear?"
+      ],
+      "exit_ticket": "Write two sentences explaining the first world war, khilafat and non-cooperation and the idea of satyagraha.",
+      "homework": "Re-read the section on the first world war, khilafat and non-cooperation and the idea of satyagraha and answer the textbook questions.",
+      "mentor_moment": "Every expert was once a beginner who kept asking questions. Confusion is a sign you are working at the edge of what you know.",
+      "supporting_resources": []
+    },
+    {
+      "period_id": "a91488c34fca",
+      "warmup": "Ask students what they already associate with the rowlatt act and jallianwala bagh and differing strands within the movement.",
+      "teacher_script": "Begin by naming today's focus: The Rowlatt Act and Jallianwala Bagh and Differing Strands within the Movement. [chunk-2 — Chapter 2: Nationalism in India > 2.3 The Rowlatt Act and Jallianwala Bagh]\n2.3 The Rowlatt Act and Jallianwala Bagh\nIn 1919 Gandhi decided to launch a nationwide satyagraha against the proposed Rowlatt Act of 1919. This Act had been hurriedly passed through the Imperial Legislative Council despite the united opposition of the Indian members. It gave the government enormous powers to repress political activities, and allowed detention of political prisoners without trial for two years. Rallies were organised in various cities, workers went on strike in railway workshops, and shops closed down. Pause after each idea and ask a student to restate it in their own words.",
+      "blackboard_notes": "The Rowlatt Act and Jallianwala Bagh and Differing Strands within the Movement\n- [chunk-2 — Chapter 2: Nationalism in India > 2.3 The Rowlatt Act and Jallianwala Bagh]\n2.3 The Rowlatt Act and\n- This Act had been hurriedly passed through the Imperial Legislative Council despite the united opposition of t\n- It gave the government enormous powers to repress political activities, and allowed detention of political pri\n- Rallies were organised in various cities, workers went on strike in railway workshops, and shops closed down.",
+      "checkpoint_questions": [
+        "In one sentence, what is the rowlatt act and jallianwala bagh and differing strands within the movement?",
+        "Give one example of the rowlatt act and jallianwala bagh and differing strands within the movement from the chapter.",
+        "Which part of today's lesson is still unclear?"
+      ],
+      "exit_ticket": "Write two sentences explaining the rowlatt act and jallianwala bagh and differing strands within the movement.",
+      "homework": "Re-read the section on the rowlatt act and jallianwala bagh and differing strands within the movement and answer the textbook questions.",
+      "mentor_moment": "Every expert was once a beginner who kept asking questions. Confusion is a sign you are working at the edge of what you know.",
+      "supporting_resources": []
+    },
+    {
+      "period_id": "475b38bcb7c1",
+      "warmup": "Ask students what they already associate with the sense of collective belonging.",
+      "teacher_script": "Begin by naming today's focus: The Sense of Collective Belonging. [chunk-4 — Chapter 2: Nationalism in India > 2.5 The Sense of Collective Belonging]\n2.5 The Sense of Collective Belonging\nNationalism spreads when people begin to believe that they are all part of the same nation, when they discover some unity that binds them together. History and fiction, folklore and songs, popular prints and symbols all played a part in the making of nationalism. The identity of the nation is most often symbolised in a figure or an image. This helps create an image with which people can identify the nation. Pause after each idea and ask a student to restate it in their own words.",
+      "blackboard_notes": "The Sense of Collective Belonging\n- [chunk-4 — Chapter 2: Nationalism in India > 2.5 The Sense of Collective Belonging]\n2.5 The Sense of Collectiv\n- History and fiction, folklore and songs, popular prints and symbols all played a part in the making of nationa\n- The identity of the nation is most often symbolised in a figure or an image.\n- This helps create an image with which people can identify the nation.",
+      "checkpoint_questions": [
+        "In one sentence, what is the sense of collective belonging?",
+        "Give one example of the sense of collective belonging from the chapter.",
+        "Which part of today's lesson is still unclear?"
+      ],
+      "exit_ticket": "Write two sentences explaining the sense of collective belonging.",
+      "homework": "Re-read the section on the sense of collective belonging and answer the textbook questions.",
+      "mentor_moment": "Every expert was once a beginner who kept asking questions. Confusion is a sign you are working at the edge of what you know.",
+      "supporting_resources": []
+    }
+  ],
+  "activities": [
+    {
+      "id": "42ea4408ee5c",
+      "title": "Think Pair Share: Period 1: The First World War, Khilafat and Non-Cooperation and The Idea of Satyagraha",
+      "activity_type": "think_pair_share",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is period 1: the first world war, khilafat and non-cooperation and the idea of satyagraha?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of period 1: the first world war, khilafat and non-cooperation and the idea of satyagraha.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "0acb30c42a90",
+      "title": "Demonstration: Period 2: The Rowlatt Act and Jallianwala Bagh and Differing Strands within the Movement",
+      "activity_type": "demonstration",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is period 2: the rowlatt act and jallianwala bagh and differing strands within the movement?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of period 2: the rowlatt act and jallianwala bagh and differing strands within the movement.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "8a86822002a1",
+      "title": "Group Task: Period 3: The Sense of Collective Belonging",
+      "activity_type": "group_task",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is period 3: the sense of collective belonging?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of period 3: the sense of collective belonging.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "98e5f95a5efa",
+      "title": "Worksheet: The First World War, Khilafat and Non-Cooperation",
+      "activity_type": "worksheet",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is the first world war, khilafat and non-cooperation?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of the first world war, khilafat and non-cooperation.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [
+        "5169c1deab4e"
+      ],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "dce282a81053",
+      "title": "Discussion: The Idea of Satyagraha",
+      "activity_type": "discussion",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is the idea of satyagraha?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of the idea of satyagraha.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [
+        "174a371ed343"
+      ],
+      "origin": "pedagogical"
+    },
+    {
+      "id": "ad8d99c9c61b",
+      "title": "Think Pair Share: The Rowlatt Act and Jallianwala Bagh",
+      "activity_type": "think_pair_share",
+      "duration_minutes": 15,
+      "materials": [
+        "Blackboard",
+        "Notebook"
+      ],
+      "teacher_instructions": "1. Put the question 'What is the rowlatt act and jallianwala bagh?' on the board.\n2. Give pairs three minutes to agree an answer.\n3. Take responses from three pairs and correct misstatements.",
+      "expected_student_response": "A correct plain-language account of the rowlatt act and jallianwala bagh.",
+      "success_criteria": "Most pairs produce an accurate statement unprompted.",
+      "linked_period_ids": [],
+      "linked_concept_ids": [
+        "e79780665722"
+      ],
+      "origin": "pedagogical"
+    }
+  ],
+  "assessments": {
+    "items": {
+      "mcqs": [
+        {
+          "id": "24874f55725a",
+          "stem": "Which statement best describes the first world war, khilafat and non-cooperation?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of the first world war, khilafat and non-cooperation given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines the first world war, khilafat and non-cooperation directly.",
+          "difficulty": "intermediate",
+          "bloom_level": "understand",
+          "linked_concept_ids": [
+            "5169c1deab4e"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "d5515a18198c",
+          "stem": "Which statement best describes the idea of satyagraha?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of the idea of satyagraha given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines the idea of satyagraha directly.",
+          "difficulty": "foundational",
+          "bloom_level": "remember",
+          "linked_concept_ids": [
+            "174a371ed343"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "caf61124c39e",
+          "stem": "Which statement best describes the rowlatt act and jallianwala bagh?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of the rowlatt act and jallianwala bagh given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines the rowlatt act and jallianwala bagh directly.",
+          "difficulty": "intermediate",
+          "bloom_level": "understand",
+          "linked_concept_ids": [
+            "e79780665722"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "c284cce9c943",
+          "stem": "Which statement best describes differing strands within the movement?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of differing strands within the movement given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines differing strands within the movement directly.",
+          "difficulty": "foundational",
+          "bloom_level": "remember",
+          "linked_concept_ids": [
+            "465a4c570128"
+          ],
+          "marks": 1
+        },
+        {
+          "id": "f991a11bc05a",
+          "stem": "Which statement best describes the sense of collective belonging?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The definition of the sense of collective belonging given in the chapter"
+            },
+            {
+              "key": "B",
+              "text": "An unrelated process"
+            },
+            {
+              "key": "C",
+              "text": "A measurement unit only"
+            },
+            {
+              "key": "D",
+              "text": "None of the above"
+            }
+          ],
+          "correct_key": "A",
+          "explanation": "The chapter defines the sense of collective belonging directly.",
+          "difficulty": "intermediate",
+          "bloom_level": "understand",
+          "linked_concept_ids": [
+            "95879da466e8"
+          ],
+          "marks": 1
+        }
+      ],
+      "short_answers": [
+        {
+          "id": "871153c10917",
+          "question": "Explain the first world war, khilafat and non-cooperation in two or three sentences.",
+          "model_answer": "A correct explanation of the first world war, khilafat and non-cooperation as presented in the chapter.",
+          "key_points": [
+            "The First World War, Khilafat and Non-Cooperation"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "5169c1deab4e"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "d944ff056b6a",
+          "question": "Explain the idea of satyagraha in two or three sentences.",
+          "model_answer": "A correct explanation of the idea of satyagraha as presented in the chapter.",
+          "key_points": [
+            "The Idea of Satyagraha"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "174a371ed343"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "5ccaa224c8ff",
+          "question": "Explain the rowlatt act and jallianwala bagh in two or three sentences.",
+          "model_answer": "A correct explanation of the rowlatt act and jallianwala bagh as presented in the chapter.",
+          "key_points": [
+            "The Rowlatt Act and Jallianwala Bagh"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "e79780665722"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "f41eeb4d62df",
+          "question": "Explain differing strands within the movement in two or three sentences.",
+          "model_answer": "A correct explanation of differing strands within the movement as presented in the chapter.",
+          "key_points": [
+            "Differing Strands within the Movement"
+          ],
+          "marks": 2,
+          "linked_concept_ids": [
+            "465a4c570128"
+          ],
+          "rubric": {}
+        }
+      ],
+      "long_answers": [
+        {
+          "id": "275b45a20409",
+          "question": "Discuss the first world war, khilafat and non-cooperation with an example from the chapter.",
+          "marking_scheme": "2 marks definition, 2 marks example, 1 mark clarity.",
+          "word_limit": 250,
+          "marks": 5,
+          "linked_concept_ids": [
+            "5169c1deab4e"
+          ],
+          "rubric": {}
+        },
+        {
+          "id": "39e1bedf2b51",
+          "question": "Discuss the idea of satyagraha with an example from the chapter.",
+          "marking_scheme": "2 marks definition, 2 marks example, 1 mark clarity.",
+          "word_limit": 250,
+          "marks": 5,
+          "linked_concept_ids": [
+            "174a371ed343"
+          ],
+          "rubric": {}
+        }
+      ],
+      "numericals": [],
+      "total_marks": 23,
+      "coverage_map": {
+        "5169c1deab4e": [
+          "24874f55725a",
+          "871153c10917",
+          "275b45a20409"
+        ],
+        "174a371ed343": [
+          "d5515a18198c",
+          "d944ff056b6a",
+          "39e1bedf2b51"
+        ],
+        "e79780665722": [
+          "caf61124c39e",
+          "5ccaa224c8ff"
+        ],
+        "465a4c570128": [
+          "c284cce9c943",
+          "f41eeb4d62df"
+        ],
+        "95879da466e8": [
+          "f991a11bc05a"
+        ]
+      }
+    },
+    "answer_key": {
+      "24874f55725a": "A",
+      "d5515a18198c": "A",
+      "caf61124c39e": "A",
+      "c284cce9c943": "A",
+      "f991a11bc05a": "A",
+      "871153c10917": "A correct explanation of the first world war, khilafat and non-cooperation as presented in the chapter.",
+      "d944ff056b6a": "A correct explanation of the idea of satyagraha as presented in the chapter.",
+      "5ccaa224c8ff": "A correct explanation of the rowlatt act and jallianwala bagh as presented in the chapter.",
+      "f41eeb4d62df": "A correct explanation of differing strands within the movement as presented in the chapter."
+    },
+    "blueprint": {
+      "understand": 3,
+      "remember": 2
+    }
+  },
+  "gap_analysis": {
+    "misconceptions": [
+      {
+        "id": "c7f6f6b5d7d6",
+        "misconception": "Students often confuse the first world war, khilafat and non-cooperation with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe the first world war, khilafat and non-cooperation and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast the first world war, khilafat and non-cooperation against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "5169c1deab4e"
+        ]
+      },
+      {
+        "id": "0ec1564251f4",
+        "misconception": "Students often confuse the idea of satyagraha with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe the idea of satyagraha and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast the idea of satyagraha against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "174a371ed343"
+        ]
+      },
+      {
+        "id": "14b6e729882c",
+        "misconception": "Students often confuse the rowlatt act and jallianwala bagh with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe the rowlatt act and jallianwala bagh and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast the rowlatt act and jallianwala bagh against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "e79780665722"
+        ]
+      },
+      {
+        "id": "91f9a15d07cc",
+        "misconception": "Students often confuse differing strands within the movement with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe differing strands within the movement and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast differing strands within the movement against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "465a4c570128"
+        ]
+      },
+      {
+        "id": "b95d313383cc",
+        "misconception": "Students often confuse the sense of collective belonging with a superficially similar idea.",
+        "severity": "medium",
+        "diagnostic_question": "Describe the sense of collective belonging and say what it is NOT.",
+        "expected_wrong_answer": "A definition that blends two distinct ideas.",
+        "remedial_action": "Contrast the sense of collective belonging against the nearest competing idea side by side on the board.",
+        "linked_concept_ids": [
+          "95879da466e8"
+        ]
+      }
+    ],
+    "coverage_score": 1.0,
+    "remediation_summary": "Demo mode produced generic misconceptions. Configure a real model for a genuine diagnostic analysis."
+  },
+  "validation": {
+    "schema_check": {
+      "status": "pass",
+      "missing_fields": [],
+      "extra_fields": []
+    },
+    "grounding_check": {
+      "status": "pass",
+      "ungrounded_claims": [],
+      "hallucination_risk": 0.0
+    },
+    "consistency_check": {
+      "status": "pass",
+      "issues": []
+    },
+    "pedagogical_check": {
+      "status": "warn",
+      "notes": [
+        "All MCQs sit at recall/understanding level; higher-order items would strengthen the pack"
+      ],
+      "bloom_distribution": {
+        "understand": 3,
+        "remember": 2
+      }
+    },
+    "overall_status": "warn",
+    "regen_suggestions": []
+  },
+  "exports": {
+    "json_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-nationalism_in_india\\TeacherKnowledgePackage.json",
+    "lesson_plan_pdf_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-nationalism_in_india\\LessonPlan.pdf",
+    "teacher_guide_pdf_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-nationalism_in_india\\TeacherGuide.pdf",
+    "assessment_pack_pdf_path": "C:\\Users\\Hario\\Documents\\Gyantra\\samples\\exports\\sample-nationalism_in_india\\AssessmentPack.pdf"
+  }
+}

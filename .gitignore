@@ -1,0 +1,41 @@
+# Environment
+.env
+.env.local
+.env.bak
+.env*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Runtime data — uploads, generated exports, SQLite DB, LLM cache
+data/
+backend/uploads/
+backend/exports/
+backend/data/
+*.db
+*.sqlite3
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/
+
+# Project Specific
+tmpk/
+*.pdf
+_docs_dump.txt
+charter.txt
+claude.md
