@@ -669,3 +669,20 @@ A dedicated **JobTelemetry** tracker intercepts every request at the `LLMClient`
 
 ### 4. Multilingual Support
 Teachers can select from **6 output languages** (English, Hindi, Bengali, Tamil, Telugu, Marathi) via the frontend upload form. The orchestrator injects strict `LANGUAGE_INSTRUCTION` rules into the system prompts. Crucially, the agents are instructed to translate the *pedagogical prose* (like scripts and activity instructions) while leaving *technical terms* (like "Velocity", "Newton's Laws") in English, maximizing classroom utility for ESL/Bilingual education.
+
+---
+
+## Production & Future Considerations
+
+While Gyantra is fully functional for free-tier deployments, migrating to a high-scale production environment unlocks additional capabilities. The architecture is designed to support the following upgrades seamlessly:
+
+1. **Enable Deep OCR & Layout Parsing:** 
+   In free-tier deployments, memory-heavy document layout models (like `docling` and Tesseract OCR) are disabled by default to stay within the 512MB RAM limits and prevent Out Of Memory (OOM) crashes. In production with dedicated RAM (>= 2GB), setting `DOCLING_ENABLED=true` and `OCR_ENABLED=true` allows the pipeline to perfectly digest complex two-column layouts, deep tables, and scanned/image-heavy PDFs.
+2. **Migrate to PostgreSQL:**
+   Gyantra currently uses SQLite + `aiosqlite` for zero-configuration deployments. For horizontally scaled production environments, the SQLAlchemy ORM layer can trivially be pointed to a PostgreSQL database by simply updating the `DATABASE_URL` environment variable.
+3. **Phase-Wise Parallelization:**
+   The `AgentCoordinator` orchestrates LLM calls. Currently, lesson periods are generated with limited concurrency (`parallel_period_generation = 2`). In production with higher API rate limits, this can be increased, or entire stages (like Assessment Generation and Content Validation) can be parallelized to drastically reduce the total generation time.
+4. **Authentication & Rate Limiting:**
+   A full production environment should integrate robust API key authentication (e.g., JWT-based auth via Auth0 or custom middleware) and user-specific rate limiting to protect LLM budgets and prevent abuse.
+5. **Advanced Model Routing:**
+   Integrating better API keys and utilizing provider fallback chains (e.g., routing complex reasoning to GPT-4o or Claude 3.5 Sonnet, while routing simpler extractions to faster models like Gemini 1.5 Flash) can optimize both cost and quality at scale.

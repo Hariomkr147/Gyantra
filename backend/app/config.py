@@ -140,7 +140,7 @@ class Settings(BaseSettings):
     # Docling's models need roughly this much free RAM. Below it we skip docling
     # and use the built-in parser rather than crash mid-upload.
     docling_min_memory_mb: int = 1500
-    ocr_enabled: bool = True
+    ocr_enabled: bool = False
     ocr_language: str = "eng"
     ocr_max_pages: int = 40
     # Below this ratio of extractable text per page, treat the PDF as scanned.
