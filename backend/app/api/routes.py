@@ -73,6 +73,8 @@ async def health(probe: bool = False) -> dict:
         "parser": "docling" if settings.docling_enabled else "builtin",
         "supported_extensions": sorted(SUPPORTED_EXTENSIONS),
         "max_file_size_mb": settings.max_file_size_mb,
+        "cors_origins": settings.cors_origins,
+        "cors_origin_list": settings.cors_origin_list,
     }
 
     if probe and not settings.demo_mode:
