@@ -44,6 +44,19 @@ from app.services.chunker import Chunk, SectionIndex
 from app.services.llm_client import LLMClient, LLMError
 from app.services.stages_knowledge import _safe_enum
 
+def _safe_int(val: Any, default: int) -> int:
+    try:
+        if val is None:
+            return default
+        s = str(val).strip().split()[0].replace(",", "")
+        return int(float(s))
+    except (ValueError, TypeError, IndexError, AttributeError):
+        return default
+
+def _safe_list(val: Any) -> list:
+    if isinstance(val, list):
+        return val
+    return []
 def _get_lang_inst(profile: DocumentProfile) -> str:
     lang = profile.language.lower() if profile.language else "en"
     if lang.startswith("en") or lang == "english":
@@ -611,7 +624,7 @@ async def generate_assessments(
     valid_ids = {c.id for c in knowledge.concepts}
 
     def links(raw: dict) -> list[str]:
-        return [str(c) for c in (raw.get("linked_concept_ids") or []) if str(c) in valid_ids]
+        return [str(c) for c in _safe_list(raw.get("linked_concept_ids")) if str(c) in valid_ids]
 
     mcqs: list[MCQItem] = []
     for raw in data.get("mcqs") or []:
@@ -619,7 +632,7 @@ async def generate_assessments(
             continue
         options = [
             MCQOption(key=str(o.get("key", chr(65 + i)))[:2], text=str(o.get("text", ""))[:400])
-            for i, o in enumerate(raw.get("options") or [])
+            for i, o in enumerate(_safe_list(raw.get("options")))
             if isinstance(o, dict)
         ]
         if len(options) < 2:
@@ -636,7 +649,7 @@ async def generate_assessments(
                 difficulty=_safe_enum(Difficulty, raw.get("difficulty"), Difficulty.INTERMEDIATE),
                 bloom_level=_safe_enum(BloomLevel, raw.get("bloom_level"), BloomLevel.UNDERSTAND),
                 linked_concept_ids=links(raw),
-                marks=int(raw.get("marks") or 1),
+                marks=_safe_int(raw.get("marks"), 1),
             )
         )
 
@@ -644,11 +657,11 @@ async def generate_assessments(
         ShortAnswerItem(
             question=str(r["question"])[:600],
             model_answer=str(r.get("model_answer", ""))[:1200],
-            key_points=[str(k)[:200] for k in (r.get("key_points") or [])][:6],
-            marks=int(r.get("marks") or 2),
+            key_points=[str(k)[:200] for k in _safe_list(r.get("key_points"))][:6],
+            marks=_safe_int(r.get("marks"), 2),
             linked_concept_ids=links(r),
         )
-        for r in (data.get("short_answers") or [])
+        for r in _safe_list(data.get("short_answers"))
         if isinstance(r, dict) and r.get("question")
     ]
 
@@ -656,11 +669,11 @@ async def generate_assessments(
         LongAnswerItem(
             question=str(r["question"])[:800],
             marking_scheme=str(r.get("marking_scheme", ""))[:1500],
-            word_limit=int(r.get("word_limit") or 250),
-            marks=int(r.get("marks") or 5),
+            word_limit=_safe_int(r.get("word_limit"), 250),
+            marks=_safe_int(r.get("marks"), 5),
             linked_concept_ids=links(r),
         )
-        for r in (data.get("long_answers") or [])
+        for r in _safe_list(data.get("long_answers"))
         if isinstance(r, dict) and r.get("question")
     ]
 
@@ -669,11 +682,11 @@ async def generate_assessments(
             question=str(r["question"])[:800],
             answer=str(r.get("answer", ""))[:200],
             unit=str(r.get("unit", ""))[:40],
-            solution_steps=[str(s)[:400] for s in (r.get("solution_steps") or [])][:10],
-            marks=int(r.get("marks") or 3),
+            solution_steps=[str(s)[:400] for s in _safe_list(r.get("solution_steps"))][:10],
+            marks=_safe_int(r.get("marks"), 3),
             linked_concept_ids=links(r),
         )
-        for r in (data.get("numericals") or [])
+        for r in _safe_list(data.get("numericals"))
         if isinstance(r, dict) and r.get("question")
     ] if quantitative else []
 
