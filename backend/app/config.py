@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     # Comma-separated priority order. Gemini first by default: the free tier of
     # Google AI Studio is the most reliable of the three, and its model IDs are
     # stable (OpenRouter rotates free models in and out without notice).
-    llm_provider: str = "gemini,groq,openrouter"
+    llm_provider: str = "routesme,nvidia,gemini,groq,openrouter"
 
     gemini_api_key: str = ""
     openrouter_api_key: str = ""
@@ -43,11 +43,13 @@ class Settings(BaseSettings):
     # Generic OpenAI-compatible gateway (agentrouter.org and similar). Dormant
     # unless set; add it to LLM_PROVIDER to use it.
     routesme_api_key: str = ""
+    nvidia_api_key: str = ""
 
     gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta"
     openrouter_base_url: str = "https://openrouter.ai/api/v1"
     groq_base_url: str = "https://api.groq.com/openai/v1"
     routesme_base_url: str = "https://routesme.online/v1"
+    nvidia_base_url: str = "https://integrate.api.nvidia.com/v1"
 
     llm_temperature: float = 0.3
     llm_timeout_seconds: int = 120
@@ -107,6 +109,13 @@ class Settings(BaseSettings):
     routesme_model_plan: str = "GLM5.2R"
     routesme_model_generate: str = "GLM5.2R"
     routesme_model_validate: str = "GLM5.2R"
+
+    # nvidia NIM models
+    nvidia_model_fast: str = "meta/llama-3.1-8b-instruct"
+    nvidia_model_extract: str = "meta/llama-3.1-70b-instruct"
+    nvidia_model_plan: str = "deepseek-ai/deepseek-r1"
+    nvidia_model_generate: str = "meta/llama-3.1-70b-instruct"
+    nvidia_model_validate: str = "meta/llama-3.1-8b-instruct"
 
     # --- Optional demo mode ---
     # When true the pipeline runs with a deterministic stub LLM so the app is

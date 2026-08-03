@@ -434,6 +434,13 @@ class RoutesMeProvider(OpenAICompatProvider):
     model_prefix = "routesme_model"
 
 
+class NvidiaProvider(OpenAICompatProvider):
+    name = "nvidia"
+    key_attr = "nvidia_api_key"
+    base_url_attr = "nvidia_base_url"
+    model_prefix = "nvidia_model"
+
+
 # ── registry ─────────────────────────────────────────────────────────────────
 
 PROVIDER_CLASSES: dict[str, type[BaseProvider]] = {
@@ -441,6 +448,7 @@ PROVIDER_CLASSES: dict[str, type[BaseProvider]] = {
     "openrouter": OpenRouterProvider,
     "groq": GroqProvider,
     "routesme": RoutesMeProvider,
+    "nvidia": NvidiaProvider,
 }
 
 
