@@ -136,7 +136,8 @@ async def build_teaching_plan(
         data = await client.complete_json(
             stage="teaching_plan",
             system_prompt=prompts.PLAN_SYSTEM,
-            user_prompt=user_prompt,
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            json_schema={"type": "object"},
             max_tokens=2600,
         )
     except LLMError as exc:
@@ -505,7 +506,8 @@ async def generate_activities(
         data = await client.complete_json(
             stage="activities",
             system_prompt=prompts.ACTIVITY_SYSTEM,
-            user_prompt=user_prompt,
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            json_schema={"type": "object"},
             max_tokens=3000,
             temperature=0.5,  # variety matters here
         )
@@ -612,7 +614,8 @@ async def generate_assessments(
         data = await client.complete_json(
             stage="assessments",
             system_prompt=prompts.ASSESS_SYSTEM,
-            user_prompt=user_prompt,
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            json_schema={"type": "object"},
             max_tokens=4000,
         )
     except LLMError as exc:
@@ -754,7 +757,8 @@ async def analyse_gaps(
         data = await client.complete_json(
             stage="gap_analysis",
             system_prompt=prompts.GAP_SYSTEM,
-            user_prompt=user_prompt,
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            json_schema={"type": "object"},
             max_tokens=2400,
         )
     except LLMError as exc:
@@ -773,7 +777,7 @@ async def analyse_gaps(
             expected_wrong_answer=str(r.get("expected_wrong_answer", ""))[:400],
             remedial_action=str(r.get("remedial_action", ""))[:1000],
             linked_concept_ids=[
-                str(c) for c in (r.get("linked_concept_ids") or []) if str(c) in valid_ids
+                str(c) for c in _safe_list(r.get("linked_concept_ids")) if str(c) in valid_ids
             ],
         )
         for r in (data.get("misconceptions") or [])
