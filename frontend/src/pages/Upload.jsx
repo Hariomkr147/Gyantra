@@ -181,16 +181,7 @@ export default function Upload() {
 
             {showAdvanced && (
               <div className="space-y-4 border-t border-default pt-5">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Field label="Board / curriculum">
-                    <Select
-                      value={form.board}
-                      onChange={set('board')}
-                      options={BOARDS}
-                      disabled={submitting}
-                    />
-                  </Field>
-
+                <div className="grid gap-4 sm:grid-cols-1">
                   <Field label="Teaching style">
                     <Select
                       value={form.teaching_style}

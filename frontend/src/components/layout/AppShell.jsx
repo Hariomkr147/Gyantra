@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import {
-  BookOpenCheck,
+
   GraduationCap,
   History,
   LayoutDashboard,
@@ -147,15 +147,6 @@ export function AppShell() {
 
           <div className="flex-1" />
 
-          <a
-            href="/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[12.5px] font-medium text-fg-muted transition-colors hover:bg-app-subtle hover:text-fg"
-          >
-            <BookOpenCheck size={14} aria-hidden="true" />
-            <span className="hidden sm:inline">API docs</span>
-          </a>
         </header>
 
         <main id="main" className="flex-1">

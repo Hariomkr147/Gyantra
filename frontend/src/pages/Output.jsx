@@ -16,15 +16,13 @@ import {
 } from 'lucide-react'
 import { Card, CardBody, EmptyState, Stat } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Badge, GroundingBadge, ValidationPill } from '@/components/ui/Badge'
+import { Badge, GroundingBadge } from '@/components/ui/Badge'
 import { Tabs } from '@/components/ui/Disclosure'
 import { PeriodCard } from '@/components/output/PeriodCard'
 import { ActivityPanel } from '@/components/output/ActivityPanel'
 import { AssessmentPanel } from '@/components/output/AssessmentPanel'
 import { GapPanel } from '@/components/output/GapPanel'
-import { ValidationPanel } from '@/components/output/ValidationPanel'
-import { CurriculumPanel } from '@/components/output/CurriculumPanel'
-import { JsonViewer } from '@/components/output/JsonViewer'
+
 import { useToast } from '@/components/ui/Toast'
 import { getJob, triggerDownload } from '@/lib/api'
 import { DOWNLOAD_FORMATS } from '@/lib/constants'
@@ -524,7 +522,6 @@ export default function Output() {
 
   const tabs = [
     { id: 'overview', label: 'Overview' },
-    { id: 'curriculum', label: 'Curriculum', count: pkg.curriculum_alignment?.mapped_standards?.length || 0 },
     { id: 'knowledge', label: 'Knowledge', count: pkg.knowledge_extraction?.concepts?.length },
     { id: 'plan', label: 'Lesson plan', count: plan?.total_periods },
     { id: 'activities', label: 'Activities', count: pkg.activities?.length },
@@ -542,8 +539,6 @@ export default function Output() {
       label: 'Gap analysis',
       count: pkg.gap_analysis?.misconceptions?.length,
     },
-    { id: 'validation', label: 'Validation' },
-    { id: 'json', label: 'JSON' },
     { id: 'exports', label: 'Export' },
   ]
 
@@ -558,12 +553,6 @@ export default function Output() {
             <div className="mt-2 flex flex-wrap items-center gap-2 text-[13px] text-fg-subtle">
               <FileText size={14} aria-hidden="true" />
               <span className="truncate">{job.file_name}</span>
-              {pkg.validation && (
-                <>
-                  <span className="text-fg-muted">·</span>
-                  <ValidationPill status={pkg.validation.overall_status} />
-                </>
-              )}
             </div>
           </div>
 
@@ -580,8 +569,6 @@ export default function Output() {
       <Tabs tabs={tabs} active={tab} onChange={setTab} className="mb-6" />
 
       {tab === 'overview' && <Overview pkg={pkg} job={job} />}
-
-      {tab === 'curriculum' && <CurriculumPanel alignment={pkg.curriculum_alignment} />}
 
       {tab === 'knowledge' && <Knowledge ke={pkg.knowledge_extraction} />}
 
@@ -625,15 +612,6 @@ export default function Output() {
 
       {tab === 'gaps' && (
         <GapPanel gapAnalysis={pkg.gap_analysis} conceptNames={conceptNames} />
-      )}
-
-      {tab === 'validation' && <ValidationPanel validation={pkg.validation} />}
-
-      {tab === 'json' && (
-        <JsonViewer
-          data={pkg}
-          filename={`${(job.file_name || 'package').replace(/\.[^.]+$/, '')}_TKP.json`}
-        />
       )}
 
       {tab === 'exports' && (
