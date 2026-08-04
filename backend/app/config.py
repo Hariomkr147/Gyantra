@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     # Comma-separated priority order. Gemini first by default: the free tier of
     # Google AI Studio is the most reliable of the three, and its model IDs are
     # stable (OpenRouter rotates free models in and out without notice).
-    llm_provider: str = "groq,nvidia,gemini"
+    llm_provider: str = "nvidia,gemini,groq"
 
     gemini_api_key: str = ""
     openrouter_api_key: str = ""
@@ -71,25 +71,20 @@ class Settings(BaseSettings):
     openrouter_requests_per_minute: int = 15
     routesme_requests_per_minute: int = 20
 
-    # --- Per-role model IDs, per provider ---
-    # Roles map to stages in model_registry.py.
-    #
-    # gemini-flash-latest is a *thinking* model: it spends output tokens on
-    # internal reasoning before the answer (thoughtsTokenCount in the response).
-    # gemini_thinking_headroom below compensates so the answer is never starved.
-    gemini_model_fast: str = "gemini-flash-latest"
-    gemini_model_extract: str = "gemini-flash-latest"
-    gemini_model_plan: str = "gemini-flash-latest"
-    gemini_model_generate: str = "gemini-flash-latest"
-    gemini_model_validate: str = "gemini-flash-lite-latest"
+    # Per-role model selection. Roles map to pipeline stages:
+    # fast=classification, extract=knowledge + gap analysis, plan=teaching planner,
+    # generate=content/activities/assessments, validate=grounding audit.
+    
+    # gemini models (configured for high rate-limits & stability)
+    gemini_model_fast: str = "gemini-3.1-flash-lite"
+    gemini_model_extract: str = "gemini-3.5-flash"
+    gemini_model_plan: str = "gemini-3.5-flash"
+    gemini_model_generate: str = "gemini-3.5-flash"
+    gemini_model_validate: str = "gemini-3.1-flash-lite"
 
-    # Extra output tokens granted to Gemini on top of what a stage asks for, to
-    # cover reasoning. Without it a 300-token request can spend 284 on thoughts
-    # and return a truncated answer.
-    gemini_thinking_headroom: int = 1200
-
+    # groq models (lightning-fast backup)
     groq_model_fast: str = "llama-3.1-8b-instant"
-    groq_model_extract: str = "llama-3.3-70b-versatile"
+    groq_model_extract: str = "llama-3.1-8b-instant"
     groq_model_plan: str = "llama-3.3-70b-versatile"
     groq_model_generate: str = "llama-3.3-70b-versatile"
     groq_model_validate: str = "llama-3.1-8b-instant"
@@ -112,9 +107,9 @@ class Settings(BaseSettings):
 
     # nvidia NIM models
     nvidia_model_fast: str = "meta/llama-3.1-8b-instruct"
-    nvidia_model_extract: str = "meta/llama-3.3-70b-instruct"
-    nvidia_model_plan: str = "meta/llama-3.3-70b-instruct"
-    nvidia_model_generate: str = "meta/llama-3.3-70b-instruct"
+    nvidia_model_extract: str = "nvidia/llama-3.3-nemotron-super-49b-v1"
+    nvidia_model_plan: str = "nvidia/llama-3.3-nemotron-super-49b-v1"
+    nvidia_model_generate: str = "nvidia/llama-3.3-nemotron-super-49b-v1"
     nvidia_model_validate: str = "meta/llama-3.1-8b-instruct"
 
     # --- Optional demo mode ---

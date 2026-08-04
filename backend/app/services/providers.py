@@ -47,6 +47,7 @@ class ProviderError(Exception):
     status: int | None = None
     provider: str = ""
     model: str = ""
+    retry_after: float | None = None
 
     def __str__(self) -> str:  # pragma: no cover - trivial
         return f"{self.provider}/{self.model} [{self.kind}] {self.message}"

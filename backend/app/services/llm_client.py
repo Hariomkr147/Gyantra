@@ -296,8 +296,7 @@ class LLMClient:
             message = provider.extract_error(resp.status_code, resp.text)
             kind = classify_status(resp.status_code)
 
-            # A rate-limit body usually states how long to wait. Waiting 2s when
-            # told to wait 25 minutes just burns attempts; fail over instead.
+            delay = None
             if resp.status_code == 429:
                 delay = parse_retry_delay(message)
                 if delay is not None and delay > settings.rate_limit_wait_ceiling:
@@ -314,6 +313,7 @@ class LLMClient:
                 status=resp.status_code,
                 provider=provider.name,
                 model=model,
+                retry_after=delay,
             )
 
         try:
@@ -435,7 +435,10 @@ class LLMClient:
                     )
                     if last:
                         break
-                    await asyncio.sleep(min(2.0 * (attempt + 1), 8.0))
+                    sleep_time = min(2.0 * (attempt + 1), 8.0)
+                    if getattr(exc, "retry_after", None) is not None:
+                        sleep_time = exc.retry_after + 0.5
+                    await asyncio.sleep(sleep_time)
 
                 except ValueError as exc:
                     # JSON parse failure: worth one more try with a firmer nudge.
