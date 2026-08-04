@@ -1,8 +1,16 @@
 # Gyantra Architecture Documentation
 
+This document describes the actual implemented architecture of Gyantra.
+
 ## System Overview
 
-Gyantra is a microservice-style pipeline architecture for converting educational documents into Teacher Knowledge Packages (TKP). The system is designed as a solo-developer project with clear separation of concerns across 10 distinct stages.
+Gyantra is a multi-provider LLM pipeline system that converts educational documents (e.g., textbook chapters) into a structured **Teacher Knowledge Package (TKP)**. The TKP contains educational classification, knowledge extraction (concepts, facts), a period-by-period teaching plan, classroom content, activities, assessments, misconception gap analysis, and a grounding validation audit.
+
+The system is split into:
+1. **React/Vite Frontend** — Responsive UI built with React, Vite, and TailwindCSS.
+2. **FastAPI Backend** — Python FastAPI backend orchestrating the 10-stage pipeline, storing job states in SQLite, and generating exports.
+
+---
 
 ## High-Level Architecture
 
@@ -12,32 +20,31 @@ Gyantra is a microservice-style pipeline architecture for converting educational
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                              │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────────────────────┐  │
-│  │   STREAMLIT  │    │    FASTAPI   │    │      PIPELINE ORCHESTRATOR   │  │
-│  │   FRONTEND   │◀──▶│    BACKEND   │◀──▶│                              │  │
+│  │    REACT     │    │    FASTAPI   │    │     PIPELINE ORCHESTRATOR    │  │
+│  │   FRONTEND   │◀──▶│    BACKEND   │◀──▶│      (pipeline.py)           │  │
+│  │  (Vite + TS) │    │  (Uvicorn)   │    │                              │  │
 │  │              │    │              │    │  ┌────────────────────────┐  │  │
-│  │ • Upload UI  │    │ • REST API   │    │  │ 1. Document Intelligence│  │  │
+│  │ • Upload UI  │    │ • REST API   │    │  │ 1. Doc Intelligence    │  │  │
 │  │ • Progress   │    │ • SSE Stream │    │  │ 2. Classification       │  │  │
 │  │ • Preview    │    │ • Job Mgmt   │    │  │ 3. Knowledge Extraction │  │  │
 │  │ • Export     │    │ • File Store │    │  │ 4. Teaching Planner     │  │  │
-│  └──────────────┘    └──────────────┘    │  │ 5. Content Generation   │  │  │
+│  └──────────────┘    └──────────────┘    │  │ 5. Classroom Content   │  │  │
 │         ▲                  ▲              │  │ 6. Activity Generation  │  │  │
 │         │                  │              │  │ 7. Assessment Gen       │  │  │
 │         │                  │              │  │ 8. Gap Analysis         │  │  │
 │         │                  │              │  │ 9. Validation           │  │  │
-│         │                  │              │  │ 10. Publishing          │  │  │
-│         └──────────────────┘              │  └────────────────────────┘  │  │
-│                    SSE                        ▲                ▲          │  │
-│                                             │                │          │  │
-│                              ┌────────────────┴────┐ ┌────────┴────┐     │  │
-│                              │   LLM CLIENT        │ │  PARSERS    │     │  │
-│                              │   (OpenRouter)      │ │             │     │  │
-│                              │                     │ │ • PDF       │     │  │
-│                              │ • Classification    │ │ • DOCX      │     │  │
-│                              │ • Extraction        │ │ • PPTX      │     │  │
-│                              │ • Planning          │ │ • OCR       │     │  │
-│                              │ • Generation        │ │ • Router    │     │  │
-│                              │ • Validation        │ └─────────────┘     │  │
-│                              └─────────────────────┘                     │  │
+│         └──────────────────┘              │  │ 10. Publishing          │  │  │
+│                    SSE                        └────────────────────────┘  │  │
+│                                                        ▲                  │  │
+│                                                        │                  │  │
+│                              ┌─────────────────────────┴───┐              │  │
+│                              │   LLM CLIENT (llm_client.py)│              │  │
+│                              ├─────────────────────────────┤              │  │
+│                              │  Provider Failover Chain:   │              │  │
+│                              │  • Gemini (Primary)         │              │  │
+│                              │  • RoutesMe / Nvidia NIM    │              │  │
+│                              │  • Groq / OpenRouter        │              │  │
+│                              └─────────────────────────────┘              │  │
 │                                             ▲                             │  │
 │                              ┌──────────────┴──────────────┐             │  │
 │                              │      DATA LAYER             │             │  │
@@ -46,232 +53,118 @@ Gyantra is a microservice-style pipeline architecture for converting educational
 │                              │ • File System (uploads,     │             │  │
 │                              │   exports)                  │             │  │
 │                              └─────────────────────────────┘             │  │
+│                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
+---
+
 ## Component Details
 
-### 1. Frontend (Streamlit)
-- **File**: `frontend/streamlit_app.py`
+### 1. Frontend (React/Vite)
+- **Tech Stack**: React, Vite, TailwindCSS.
 - **Responsibilities**:
-  - File upload with document type hint selection
-  - Real-time progress display via SSE
-  - Tabbed package preview (Overview, Knowledge, Plan, Content, Activities, Assessments, Gaps, Validation)
-  - Export downloads (JSON, 3 PDF formats)
-- **State Management**: Streamlit session state for job tracking
+  - File upload with teaching preferences (style, period duration, etc.).
+  - Real-time progress display using **Server-Sent Events (SSE)** with automatic fallback to polling.
+  - Interactive Preview panel to view the generated Overview, Concepts, Lesson Plan, Activities, Assessments, and Gap Analysis.
+  - Download options for the raw JSON and ReportLab-generated PDFs.
 
 ### 2. Backend API (FastAPI)
 - **File**: `backend/app/main.py`
 - **Endpoints**:
-  - `POST /api/upload` — Accept file, create job, start background pipeline
-  - `GET /api/jobs/{job_id}` — Job status and results
-  - `GET /api/jobs/{job_id}/progress` — SSE progress stream
-  - `GET /api/jobs/{job_id}/download/{format}` — Export downloads
-  - `GET /api/health` — Health check
-- **Background Processing**: FastAPI BackgroundTasks for non-blocking pipeline execution
+  - `POST /api/upload` — Validates upload size/type, creates a database job record, and fires the async background task.
+  - `GET /api/jobs/{job_id}` — Returns the job status, metadata, and full TKP result if completed.
+  - `GET /api/jobs/{job_id}/progress` — Direct Server-Sent Events stream for real-time stage updates.
+  - `GET /api/jobs/{job_id}/download/{format}` — Serves generated export files (JSON/PDF).
+  - `GET /api/health` — API health check.
 
 ### 3. Pipeline Orchestrator
 - **File**: `backend/app/services/pipeline.py`
-- **Function**: `run_pipeline(job_id, file_path, user_hint)`
-- **Stages** (with progress ranges):
-  1. Document Intelligence (0-10%)
-  2. Educational Classification (10-15%)
-  3. Knowledge Extraction (15-30%)
-  4. Teaching Planner (30-40%)
-  5. Classroom Content (40-55%)
-  6. Activities (55-65%)
-  7. Assessments (65-80%)
-  8. Gap Analysis (80-85%)
-  9. Validation (85-95%)
-  10. Publishing (95-100%)
-- **Error Handling**: Try/catch with job failure recording
-- **Progress Updates**: `update_job_progress()` called after each stage
+- **Responsibilities**:
+  - Sequentially triggers each of the 10 stages.
+  - Manages stage timeouts and records telemetry metrics.
+  - Integrates two core execution engines:
+    - `stages_knowledge.py` — Handles extraction, classification, gap analysis, and validation.
+    - `stages_pedagogy.py` — Handles lesson planning, classroom content, activities, and assessments.
 
-### 4. Document Parsers
-- **Module**: `backend/parsers/`
+### 4. LLM Client & Resilient Routing
+- **File**: `backend/app/services/llm_client.py` & `backend/app/services/providers.py`
+- **Multi-Provider Priority Order**: Tries configured LLM endpoints in sequence: `gemini` $\rightarrow$ `routesme` $\rightarrow$ `nvidia` $\rightarrow$ `groq` $\rightarrow$ `openrouter`.
+- **Primary Configuration**:
+  - `gemini-3.5-flash-lite` (for FAST, GENERATE stages)
+  - `gemini-3.1-flash-lite` (for EXTRACT, PLAN, VALIDATE stages)
+- **JSON Parsing Safeguards**:
+  - Implements dynamic bracket-matching regex to extract valid JSON blocks from conversational wrappers.
+  - Uses `json.loads(..., strict=False)` to prevent parsing crashes due to unescaped control characters.
+- **Failover Handling**:
+  - Automatically parses `Retry-After` headers during HTTP 429 rate limit errors to compute intelligent delay periods.
+  - Fallback mechanisms transition tasks to secondary providers (Nvidia NIM, Groq, RoutesMe) if the timeout/delay threshold is breached.
+
+### 5. Document Parsers
+- **Module**: `backend/app/parsers/`
 - **Parsers**:
-  - `pdf_parser.py` — PyMuPDF (fitz): text, headings, tables, figures, equations
-  - `docx_parser.py` — python-docx: paragraphs, headings, tables, inline math
-  - `ppt_parser.py` — python-pptx: slides, shapes, tables, images
-  - `ocr_fallback.py` — Tesseract: scanned PDFs and images
-- **Router** (`router.py`): Routes based on file extension + user hint + auto-detection
+  - `pdf_parser.py` — Extracts text, tables, headers, and equations using PyMuPDF.
+  - `docx_parser.py` — Parses paragraphs, tables, and structures using python-docx.
+  - `pptx_parser.py` — Parses slide shapes and structures.
+  - `docling_parser.py` — Handles high-fidelity layout analysis when available.
+  - `ocr_fallback.py` — Uses Tesseract for scanned/image documents.
+- **Router** (`router.py`): Automatically selects the most appropriate parser depending on format and capabilities.
 
-### 5. LLM Client
-- **File**: `backend/app/services/llm_client.py`
-- **Class**: `OpenRouterClient`
-- **Features**:
-  - Async HTTP client with timeout
-  - Structured output via JSON Schema (`response_format`)
-  - Retry logic for JSON parsing failures
-  - Model selection per stage (configurable via settings)
-
-### 6. Prompt Templates
-- **File**: `backend/app/services/prompt_templates.py`
-- **Approach**: Jinja2 templates for each stage
-- **Stages with Prompts**:
-  - Classification → `DocumentProfile`
-  - Extraction → `KnowledgeExtractionResult`
-  - Planning → `TeachingPlan`
-  - Content Generation → `ClassroomContent` (per period)
-  - Activity Generation → `List[Activity]`
-  - Assessment Generation → `AssessmentPack`
-  - Gap Analysis → `LearningGapAnalysis`
-  - Validation → `ValidationRecord`
-
-### 7. Validation Engine
+### 6. Validation Engine
 - **File**: `backend/app/services/validation.py`
 - **Checks**:
-  1. Schema Validation — Pydantic model compliance
-  2. Completeness — All required content present
-  3. Consistency — Cross-stage reference integrity
-  4. Pedagogical Quality — Bloom's distribution, activity diversity, assessment variety
-  5. No Hallucination — Source grounding verification
-- **Output**: `ValidationRecord` with scores and detailed checks
+  - Schema integrity and structure verification (Pydantic model compliance).
+  - Completeness of periods, concepts, and materials.
+  - Consistency of references across pedagogical stages.
+  - Grounding audit (hallucination risk): Uses a lexical filter to index concepts and check grounding, then relies on LLM adjudication only for suspect claims.
 
-### 8. Exporter
+### 7. Exporter (ReportLab)
 - **File**: `backend/app/services/exporter.py`
-- **Formats**:
-  - JSON — Canonical `TeacherKnowledgePackage`
-  - Lesson Plan PDF — Period overview + detailed plans (ReportLab)
-  - Teacher Guide PDF — Concept reference + gap analysis
-  - Assessment Pack PDF — Formative/summative + blueprint + answer key
+- **Outputs**:
+  - `TeacherKnowledgePackage.json` — Machine-readable structured package.
+  - `LessonPlan.pdf` — PDF layout organizing lesson plans by periods.
+  - `TeacherGuide.pdf` — Reference guide for teacher concepts and misconception analyses.
+  - `AssessmentPack.pdf` — Exam blueprints, questions, and detailed answer keys.
 
-### 9. Data Layer
-- **Database**: SQLite with async SQLAlchemy (aiosqlite)
-- **Models** (`database.py`):
-  - `GenerationJob` — Job tracking with status, progress, results
-- **File Storage**: Local filesystem (`uploads/`, `exports/`)
+---
 
 ## Data Flow
 
 ```
-1. UPLOAD
-   User → Streamlit → FastAPI POST /api/upload
-   → Save file → Create job record → BackgroundTask(run_pipeline)
+1. UPLOAD:
+   User → React Form → FastAPI POST /api/upload
+   → Save upload file → Insert database JobRecord
+   → Launch background thread task (run_pipeline)
 
-2. PIPELINE EXECUTION (async background)
-   For each stage:
-     → Update job progress (stage, %, status)
-     → Execute stage logic (parser or LLM call)
-     → Store intermediate results in memory
+2. PIPELINE EXECUTION:
+   For Stage 1 to 10:
+     → Telemetry tracks stage start
+     → Invoke stage service (stages_knowledge or stages_pedagogy)
+     → Parse result into structured Pydantic models
+     → Save intermediate telemetry to db and broadcast progress
    
    Final:
-     → Run validation
-     → Export all formats
-     → Save complete package to job record
-     → Mark job COMPLETED
+     → Run validation audit
+     → Invoke exporter to build JSON & PDFs
+     → Mark JobRecord status as COMPLETED
 
-3. PROGRESS STREAMING
-   Frontend → GET /api/jobs/{id}/progress (SSE)
-   → Server sends updates every 1s until completion
+3. SSE STREAMING:
+   React Frontend → EventSource GET /api/jobs/{id}/progress
+   → Receives JSON chunks detailing current stage, stage progress, and logs
+   → Fallback to standard HTTP polling if SSE is blocked
 
-4. PREVIEW & EXPORT
-   Frontend → GET /api/jobs/{id} → Render tabs
-   Frontend → GET /api/jobs/{id}/download/{format} → Download file
+4. EXPORT:
+   React Frontend → GET /api/jobs/{id}/download/{format}
+   → Direct FileResponse download from the local storage directories
 ```
-
-## LLM Model Assignment
-
-| Stage | Model | Rationale |
-|-------|-------|-----------|
-| Classification | Gemma-2-9B | Fast, good at structured categorization |
-| Extraction | Llama-3.1-8B | Strong reasoning, knowledge extraction |
-| Planning | Mistral-7B | Good at sequencing and planning |
-| Content Gen | Llama-3.1-8B | Creative, pedagogical content |
-| Activities | Llama-3.1-8B | Diverse activity design |
-| Assessments | Llama-3.1-8B | Assessment construction |
-| Gap Analysis | Llama-3.1-8B | Analytical, misconception knowledge |
-| Validation | Mistral-7B | Critical analysis, consistency checking |
-
-All models are free on OpenRouter.
-
-## Error Handling & Resilience
-
-1. **Parser Failures**: OCR fallback for PDFs, graceful degradation
-2. **LLM Failures**: Retry with exponential backoff (max 2 retries)
-3. **JSON Parsing**: Re-prompt with error feedback
-4. **Job Failures**: Recorded in DB with error message, status=FAILED
-5. **Timeouts**: Configurable per stage (default 120s per LLM call)
-
-## Security Considerations
-
-- No authentication in prototype (single-user academic)
-- File size limits (50MB default)
-- File type validation by extension
-- No sensitive data in logs
-- API keys via environment variables only
-
-## Scalability Notes
-
-Current prototype limitations:
-- Single SQLite database (not for concurrent multi-user)
-- Local file storage
-- Sequential stage execution (could parallelize independent stages)
-- In-memory intermediate results
-
-Future improvements:
-- PostgreSQL for production
-- Redis for job queue + caching
-- Celery for distributed task processing
-- S3-compatible object storage
-- Horizontal scaling with load balancer
-
-## Monitoring & Observability
-
-- SSE progress stream provides real-time visibility
-- Structured logging (configure via `DEBUG` setting)
-- Job status persisted in database
-- Validation record captures quality metrics
-- Processing time tracked in package metadata
-
-## Deployment Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     DOCKER COMPOSE                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  ┌─────────────┐          ┌─────────────┐                   │
-│  │  FRONTEND   │─────────▶│  BACKEND    │                   │
-│  │  (port 8501)│  HTTP    │  (port 8000)│                   │
-│  └─────────────┘          └──────┬──────┘                   │
-│                                  │                          │
-│                    ┌──────────────┼──────────────┐          │
-│                    │              │              │          │
-│              ┌─────▼─────┐ ┌──────▼──────┐ ┌─────▼─────┐   │
-│              │  VOLUMES  │ │  ENV VARS   │ │  HEALTH   │   │
-│              │           │ │             │ │  CHECKS   │   │
-│              │ uploads/  │ │ OPENROUTER  │ │           │   │
-│              │ exports/  │ │ _API_KEY    │ │ /api/     │   │
-│              │ data/     │ │             │ │ health    │   │
-│              └───────────┘ └─────────────┘ └───────────┘   │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
-
-## Configuration Reference
-
-See `.env.example` for all configurable options. Key settings:
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `OPENROUTER_API_KEY` | (required) | API key for LLM access |
-| `MODEL_*` | Free models | Per-stage model selection |
-| `LLM_TEMPERATURE` | 0.3 | Generation creativity |
-| `MAX_FILE_SIZE_MB` | 50 | Upload limit |
-| `OCR_ENABLED` | true | Enable Tesseract fallback |
-| `JOB_TIMEOUT_SECONDS` | 600 | Max pipeline runtime |
-
-## Testing Strategy
-
-| Level | Tool | Coverage |
-|-------|------|----------|
-| Unit | pytest | Parsers, schemas, validation logic |
-| Integration | pytest | Pipeline with mocked LLM |
-| E2E | Manual | NCERT samples (STEM + Humanities) |
-
-Run tests: `cd backend && pytest tests/ -v`
 
 ---
 
-*Document Version: 1.0 | Architecture for Gyantra v1.0*
+## Security & Scalability
+
+- **API Security**: Keys are managed entirely through environment variables (`.env`). Upload limits are enforced (25MB standard).
+- **Concurrency**: SQLite manages simultaneous connections using WAL mode. The pipeline processes single jobs sequentially on background threads.
+- **Docker-Ready**: Configured for containerization via multi-stage Dockerfiles (`backend/Dockerfile`, `frontend/Dockerfile`) and orchestrated using `docker-compose.yml`.
+
+---
+*Document Version: 1.1 | Final Realized System Architecture*
