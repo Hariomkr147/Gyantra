@@ -136,7 +136,7 @@ async def build_teaching_plan(
         data = await client.complete_json(
             stage="teaching_plan",
             system_prompt=prompts.PLAN_SYSTEM,
-            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations. If you include quotation marks inside your JSON string values (such as dialogue or quotes), you MUST use single quotes (') instead of double quotes (\") to ensure the JSON is valid.",
             json_schema={"type": "object"},
             max_tokens=2600,
         )
@@ -395,7 +395,7 @@ async def _generate_period_content(
         data = await client.complete_json(
             stage="classroom_content",
             system_prompt=prompts.CONTENT_SYSTEM,
-            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations. If you include quotation marks inside your JSON string values (such as dialogue or quotes), you MUST use single quotes (') instead of double quotes (\") to ensure the JSON is valid.",
             json_schema={"type": "object"},
             max_tokens=2600,
             temperature=0.4,  # a little warmth for teaching prose
@@ -506,7 +506,7 @@ async def generate_activities(
         data = await client.complete_json(
             stage="activities",
             system_prompt=prompts.ACTIVITY_SYSTEM,
-            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations. If you include quotation marks inside your JSON string values (such as dialogue or quotes), you MUST use single quotes (') instead of double quotes (\") to ensure the JSON is valid.",
             json_schema={"type": "object"},
             max_tokens=3000,
             temperature=0.5,  # variety matters here
@@ -614,7 +614,7 @@ async def generate_assessments(
         data = await client.complete_json(
             stage="assessments",
             system_prompt=prompts.ASSESS_SYSTEM,
-            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations. If you include quotation marks inside your JSON string values (such as dialogue or quotes), you MUST use single quotes (') instead of double quotes (\") to ensure the JSON is valid.",
             json_schema={"type": "object"},
             max_tokens=4000,
         )
@@ -757,7 +757,7 @@ async def analyse_gaps(
         data = await client.complete_json(
             stage="gap_analysis",
             system_prompt=prompts.GAP_SYSTEM,
-            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations. If you include quotation marks inside your JSON string values (such as dialogue or quotes), you MUST use single quotes (') instead of double quotes (\") to ensure the JSON is valid.",
             json_schema={"type": "object"},
             max_tokens=2400,
         )

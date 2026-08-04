@@ -112,7 +112,7 @@ def _extract_json(text: str) -> Any:
         text = fence.group(1).strip()
 
     try:
-        return json.loads(text)
+        return json.loads(text, strict=False)
     except json.JSONDecodeError:
         pass
 
@@ -143,7 +143,7 @@ def _extract_json(text: str) -> Any:
                 depth -= 1
                 if depth == 0:
                     try:
-                        return json.loads(text[start : i + 1])
+                        return json.loads(text[start : i + 1], strict=False)
                     except json.JSONDecodeError:
                         break
 

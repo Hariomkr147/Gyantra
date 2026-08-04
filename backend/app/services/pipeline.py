@@ -502,7 +502,7 @@ class Pipeline:
             }
             if self.index:
                 self.package.metadata.rag_stats = {
-                    "chunks_indexed": len(self.index.chunks),
+                    "chunks_indexed": len(self.index._chunks),
                     "search_queries_served": getattr(self.index, "queries_served", 0)
                 }
             
