@@ -76,11 +76,11 @@ class Settings(BaseSettings):
     # generate=content/activities/assessments, validate=grounding audit.
     
     # gemini models (configured for high rate-limits & stability)
-    gemini_model_fast: str = "gemini-1.5-flash-8b"
-    gemini_model_extract: str = "gemini-1.5-flash"
-    gemini_model_plan: str = "gemini-1.5-flash"
-    gemini_model_generate: str = "gemini-1.5-flash"
-    gemini_model_validate: str = "gemini-1.5-flash-8b"
+    gemini_model_fast: str = "gemini-3.5-flash-lite"
+    gemini_model_extract: str = "gemini-3.5-flash-lite"
+    gemini_model_plan: str = "gemini-3.5-flash-lite"
+    gemini_model_generate: str = "gemini-3.5-flash-lite"
+    gemini_model_validate: str = "gemini-3.5-flash-lite"
     gemini_thinking_headroom: int = 1200
 
     # groq models (lightning-fast backup)
