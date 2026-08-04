@@ -394,7 +394,8 @@ async def _generate_period_content(
         data = await client.complete_json(
             stage="classroom_content",
             system_prompt=prompts.CONTENT_SYSTEM,
-            user_prompt=user_prompt,
+            user_prompt=user_prompt + "\n\nCRITICAL: You must respond with ONLY raw, valid JSON. Do not include markdown formatting, preambles, or explanations.",
+            json_schema={"type": "object"},
             max_tokens=2600,
             temperature=0.4,  # a little warmth for teaching prose
         )
