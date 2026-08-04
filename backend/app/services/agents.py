@@ -94,13 +94,14 @@ class AgentCoordinator:
         start_time = time.time()
         self.record_message("coordinator", role, f"Begin stage: {stage.value}", MessageType.REQUEST)
         
+        output_summary = "Aborted or crashed"
         try:
             result = await action()
-            output_summary = f"Completed successfully"
+            output_summary = "Completed successfully"
             self.record_message(role, "coordinator", output_summary, MessageType.RESPONSE)
             return result
-        except Exception as e:
-            output_summary = f"Failed: {str(e)}"
+        except BaseException as e:
+            output_summary = f"Failed: {str(e) or type(e).__name__}"
             self.record_message(role, "coordinator", output_summary, MessageType.RESPONSE)
             raise
         finally:
