@@ -35,7 +35,7 @@ class Settings(BaseSettings):
     # Comma-separated priority order. Gemini first by default: the free tier of
     # Google AI Studio is the most reliable of the three, and its model IDs are
     # stable (OpenRouter rotates free models in and out without notice).
-    llm_provider: str = "gemini,nvidia,groq"
+    llm_provider: str = "gemini,routesme,nvidia,groq,openrouter"
 
     gemini_api_key: str = ""
     openrouter_api_key: str = ""
@@ -77,10 +77,10 @@ class Settings(BaseSettings):
     
     # gemini models (configured for high rate-limits & stability)
     gemini_model_fast: str = "gemini-3.5-flash-lite"
-    gemini_model_extract: str = "gemini-3.5-flash-lite"
-    gemini_model_plan: str = "gemini-3.5-flash-lite"
+    gemini_model_extract: str = "gemini-3.1-flash-lite"
+    gemini_model_plan: str = "gemini-3.1-flash-lite"
     gemini_model_generate: str = "gemini-3.5-flash-lite"
-    gemini_model_validate: str = "gemini-3.5-flash-lite"
+    gemini_model_validate: str = "gemini-3.1-flash-lite"
     gemini_thinking_headroom: int = 1200
 
     # groq models (lightning-fast backup)
