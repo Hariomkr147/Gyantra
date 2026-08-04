@@ -81,6 +81,7 @@ class Settings(BaseSettings):
     gemini_model_plan: str = "gemini-3.5-flash"
     gemini_model_generate: str = "gemini-3.5-flash"
     gemini_model_validate: str = "gemini-3.1-flash-lite"
+    gemini_thinking_headroom: int = 1200
 
     # groq models (lightning-fast backup)
     groq_model_fast: str = "llama-3.1-8b-instant"
